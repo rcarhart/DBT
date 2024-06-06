@@ -1,6 +1,7 @@
-{%- set metrics = ["Clicks", "Impressions", "video100percent", "video50percent", "video75percent", "video25percent", "cost"] -%}
+
 
 with metrics_paid as (
+    {%- set metrics = ["Clicks", "Impressions", "video100percent", "video50percent", "video75percent", "video25percent", "cost"] -%}
     select
         platform,
         adgroupid,
@@ -25,4 +26,3 @@ with metrics_paid as (
 
 )
 select * from metrics_paid
-order by [Date];
