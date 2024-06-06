@@ -112,5 +112,5 @@ maintable_two as (
     from maintable
 )
 
-select *
-from maintable_two
+select * from maintable_two
+--this is a comment
