@@ -1,0 +1,11 @@
+version: 2
+
+models:
+  - name: ad
+    description: "Final table for ad date for analytics"
+    tests:
+        - dbt_utils.unique_combination_of_columns:
+            combination_of_columns:
+                - adid
+                - adgroupid
+

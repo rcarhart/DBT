@@ -1,88 +1,18 @@
 version: 2
 
 models:
-  - name: DigitalData_AHA_Google
-    description: "Raw data for American Heart Association for Google Ads"
+  - name: doner
+    description: "The main table for goodle ads done"
     columns:
-      - name: Date
-        description: "The time of the ad"
-        tests: []
-      - name: Ad Group ID
-        description: "The ID of the ad group"
-        tests: []
-      - name: Ad Group Name
-        description: "The name of the ad group"
-        tests: []
-      - name: Ad ID
-        description: "The ID of the ad"
-        tests: []
-      - name: Ad Labels
-        description: "The labels of the ad"
-        tests: []
-      - name: Ad Type
-        description: "The type of the ad"
-        tests: []
-      - name: Campaign
-        description: "The campaign of the ad"
-        tests: []
-      - name: Campaign ID
-        description: "The ID of the campaign"
-        tests: []
-      - name: Campaign Type
-        description: "The type of the campaign"
-        tests: []
-      - name: GoogleAds_Paid_ConversionName
-        description: "The name of the conversion"
-        tests: []
-      - name: Clicks
-        description: "The number of clicks"
-        tests: []
-      - name: Cost (USD)
-        description: "The cost in USD"
-        tests: []
-      - name: Impressions
-        description: "The number of impressions"
-        tests: []
-      - name: Video Played To 100%
-        description: "The number of videos played to 100%"
-        tests: []
-      - name: Video Played To 25%
-        description: "The number of videos played to 25%"
-        tests: []
-      - name: Video Played To 50%
-        description: "The number of videos played to 50%"
-        tests: []
-      - name: Video Played To 75%
-        description: "The number of videos played to 75%"
-        tests: []
-      - name: GoogleAds_Paid_Conversions
-        description: "The number of paid conversions"
-        tests: []
-      - name: Views (100%)
-        description: "The number of views to 100%"
-        tests: []
-      - name: Views (25%)
-        description: "The number of views to 25%"
-        tests: []
-      - name: Views (50%)
-        description: "The number of views to 50%"
-        tests: []
-      - name: Views (75%)
-        description: "The number of views to 75%"
-        tests: []
-      - name: Data Source name
-        description: "The name of the data source"
-        tests: []
-      - name: Conversions
-        description: "The number of conversions"
-        tests: []
-      - name: Ad
-        description: "The ad"
-        tests: []
-      - name: Ad Name
-        description: "The name of the ad"
-        tests: []
-      - name: Ad Final Urls
-        description: "The final URL of the ad"
-        tests: []
+      - name: adid
+        description: "The ad id"
+        tests:
+          - not_null
+      - name: adgroupid
+        description: "The ad group id"
+        tests:
+          - not_null
+
+
+
 
