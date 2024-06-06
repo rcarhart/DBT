@@ -1,23 +1,4 @@
-with googleads_doner_union as (
-   select * from {{ source('GoogleSheets', 'DigitalData_AHA_Google') }}
-    UNION ALL
-   select * from {{ source('GoogleSheets','DigitalData_DetroitZoo_Google') }}
-   UNION ALL
-   select * from {{ source('GoogleSheets','DigitalData_HungryHowies_Google LDSM') }}
-   UNION ALL
-   select * from {{ source('GoogleSheets','DigitalData_HungryHowies_Google Blitz') }}
-   UNION ALL
-   select * from {{ source('GoogleSheets','DigitalData_HungryHowies_Google Mature Markets') }}
-   UNION ALL
-   select * from {{ source('GoogleSheets','DigitalData_Motive_Google') }}
-   UNION ALL
-   select * from {{ source('GoogleSheets','DigitalData_Sprayway_Google') }}
-   UNION ALL
-   select * from {{ source('GoogleSheets','DigitalData_WorldStrides_Google') }}
-),
-
-
-maintable as (
+with maintable as (
     select
         [Date],
         -- case statement to create PMAX off of ad group id
@@ -73,8 +54,10 @@ maintable as (
         PARSENAME(REPLACE([Data Source Name], '|', '.'), 3) AS property, --parse data source to create property
         Conversions,
         [Ad Final Urls] as ad_final_urls
-    from googleads_doner_union
+    from {{ ref('doner_source_union') }}
 ),
+
+
 
 maintable_two as (
     select
