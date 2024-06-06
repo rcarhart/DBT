@@ -113,4 +113,3 @@ maintable_two as (
 )
 
 select * from maintable_two
---this is a comment

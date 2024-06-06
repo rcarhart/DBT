@@ -1,10 +1,5 @@
 {%- set metrics = ["Clicks", "Impressions", "video100percent", "video50percent", "video75percent", "video25percent", "cost"] -%}
 
--- Debug statement to check the metrics variable content
-{% for metric in metrics %}
-    -- {{ metric }}
-{% endfor %}
-
 with metrics_paid as (
     select
         platform,
