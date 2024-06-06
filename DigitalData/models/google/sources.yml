@@ -1,0 +1,28 @@
+version: 2
+
+sources:
+  - name: GoogleSheets
+    description: "Raw data from GoogleSheets."
+    database: GoogleSheets
+    schema: dbo
+    tables:
+      - name: DigitalData_AHA_Google
+        description: "raw Digital Data for AHA Google."
+      - name: DigitalData_DetroitZoo_Google
+        description: "raw Digital Data for Detroit Zoo Google."
+      - name: DigitalData_HungryHowies_Google LDSM
+        description: "Raw data from Hungry Howies Google LDSM."
+      - name: DigitalData_HungryHowies_Google Blitz
+        description: "Raw data from Hungry Howies Google Blitz."
+      - name: DigitalData_HungryHowies_Google Mature Markets
+        description: "Raw data from Hungry Howies Google Mature Markets."
+      - name: DigitalData_Motive_Google
+        description: "raw Digital Data for Motive Google."
+      - name: DigitalData_Sprayway_Google
+        description: "raw Digital Data for Sprayway Google."
+      - name: DigitalData_WorldStrides_Google
+        description: "raw Digital Data for WorldStrides Google."
+
+
+
+
