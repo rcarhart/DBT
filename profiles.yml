@@ -1,0 +1,12 @@
+DigitalData:
+  target: dev
+  outputs:
+    dev:
+      type: sqlserver
+      driver: 'ODBC Driver 17 for SQL Server'
+      server: 10.10.110.92,8050
+      port: 8050
+      database: GoogleSheets
+      schema: dbo
+      windows_login: TRUE
+      TrustServerCertificate: yes

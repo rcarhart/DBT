@@ -7,7 +7,7 @@ with ad_staging as (
         adname_platform,
         platform,
         cast(getdate() as date) as load_date,
-        row_number() over (partition by adgroupid, adid order by (select null)) as row_num
+        row_number() over (partition by adgroupid, adid order by adgroupid, adid) as row_num
     from {{ ref('doner') }}
     where conversiontype is null
     group by
@@ -26,6 +26,7 @@ client,
 property,
 adname_platform,
 platform,
-load_date
+load_date,
+row_num
 from ad_staging
 where row_num = 1
