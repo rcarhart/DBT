@@ -109,3 +109,1960 @@ Runtime Error
 [0m17:18:24.128604 [debug] [MainThread]: Command `dbt run` failed at 17:18:24.113021 after 0.12 seconds
 [0m17:18:24.128604 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000026ADBD87010>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000026ADB77E690>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000026ADBD30490>]}
 [0m17:18:24.130378 [debug] [MainThread]: Flushing usage events
+[0m16:35:56.100624 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A29904B110>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A299041510>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A299043F10>]}
+
+
+============================== 16:35:56.108386 | 05f8709e-35d8-4b06-9bc8-e23288bb3bc5 ==============================
+[0m16:35:56.108386 [info ] [MainThread]: Running with dbt=1.7.16
+[0m16:35:56.109542 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'C:\\Users\\alteryxb\\.dbt', 'fail_fast': 'False', 'debug': 'False', 'log_path': 'C:\\Users\\alteryxb\\PythonScripts\\DBT\\logs', 'version_check': 'True', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'invocation_command': 'dbt build', 'introspect': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m16:35:56.705119 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '05f8709e-35d8-4b06-9bc8-e23288bb3bc5', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A299AD2790>]}
+[0m16:35:56.798875 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '05f8709e-35d8-4b06-9bc8-e23288bb3bc5', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A299042210>]}
+[0m16:35:56.798875 [info ] [MainThread]: Registered adapter: sqlserver=1.7.4
+[0m16:35:56.833012 [debug] [MainThread]: checksum: b42e23759fbef548c33c6e49ebf263a93f046443b71b5f37fe49de1c6429a7cf, vars: {}, profile: , target: , version: 1.7.16
+[0m16:35:57.080464 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m16:35:57.080464 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m16:35:57.080464 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 2 unused configuration paths:
+- models.mapping
+- models.google
+[0m16:35:57.096154 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '05f8709e-35d8-4b06-9bc8-e23288bb3bc5', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A299CEA1D0>]}
+[0m16:35:57.138237 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '05f8709e-35d8-4b06-9bc8-e23288bb3bc5', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A299BD3CD0>]}
+[0m16:35:57.139237 [info ] [MainThread]: Found 9 models, 3 tests, 8 sources, 0 exposures, 0 metrics, 564 macros, 0 groups, 0 semantic models
+[0m16:35:57.143461 [info ] [MainThread]: 
+[0m16:35:57.145525 [debug] [MainThread]: Acquiring new sqlserver connection 'master'
+[0m16:35:57.148503 [debug] [ThreadPool]: Acquiring new sqlserver connection 'list_GoogleSheets'
+[0m16:35:57.168840 [debug] [ThreadPool]: Using sqlserver connection "list_GoogleSheets"
+[0m16:35:57.169846 [debug] [ThreadPool]: On list_GoogleSheets: /* {"app": "dbt", "dbt_version": "1.7.16", "profile_name": "DigitalData", "target_name": "dev", "connection_name": "list_GoogleSheets"} */
+select  name as [schema]
+    from sys.schemas 
+  
+[0m16:35:57.170820 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m16:35:57.171866 [debug] [ThreadPool]: fabric adapter: Using connection string: DRIVER={ODBC Driver 17 for SQL Server};SERVER=10.10.110.92,8050;Database=GoogleSheets;trusted_connection=Yes;encrypt=Yes;TrustServerCertificate=Yes;APP=dbt-sqlserver/1.7.4;ConnectRetryCount=1
+[0m16:35:57.266904 [debug] [ThreadPool]: fabric adapter: Connected to db: GoogleSheets
+[0m16:35:57.273517 [debug] [ThreadPool]: SQL status: OK in 0.0 seconds
+[0m16:35:57.276468 [debug] [ThreadPool]: On list_GoogleSheets: Close
+[0m16:35:57.280460 [debug] [ThreadPool]: Acquiring new sqlserver connection 'list_GoogleSheets_dbo'
+[0m16:35:57.290470 [debug] [ThreadPool]: Using sqlserver connection "list_GoogleSheets_dbo"
+[0m16:35:57.291461 [debug] [ThreadPool]: On list_GoogleSheets_dbo: /* {"app": "dbt", "dbt_version": "1.7.16", "profile_name": "DigitalData", "target_name": "dev", "connection_name": "list_GoogleSheets_dbo"} */
+select
+      table_catalog as [database],
+      table_name as [name],
+      table_schema as [schema],
+      case when table_type = 'BASE TABLE' then 'table'
+           when table_type = 'VIEW' then 'view'
+           else table_type
+      end as table_type
+
+    from INFORMATION_SCHEMA.TABLES 
+    where table_schema like 'dbo'
+  
+[0m16:35:57.292462 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m16:35:57.293460 [debug] [ThreadPool]: fabric adapter: Using connection string: DRIVER={ODBC Driver 17 for SQL Server};SERVER=10.10.110.92,8050;Database=GoogleSheets;trusted_connection=Yes;encrypt=Yes;TrustServerCertificate=Yes;APP=dbt-sqlserver/1.7.4;ConnectRetryCount=1
+[0m16:35:57.294461 [debug] [ThreadPool]: fabric adapter: Connected to db: GoogleSheets
+[0m16:35:57.331264 [debug] [ThreadPool]: SQL status: OK in 0.0 seconds
+[0m16:35:57.331264 [debug] [ThreadPool]: On list_GoogleSheets_dbo: ROLLBACK
+[0m16:35:57.331264 [debug] [ThreadPool]: On list_GoogleSheets_dbo: Close
+[0m16:35:57.361464 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '05f8709e-35d8-4b06-9bc8-e23288bb3bc5', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A299CBA3D0>]}
+[0m16:35:57.361464 [debug] [MainThread]: On master: COMMIT
+[0m16:35:57.361464 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m16:35:57.361464 [info ] [MainThread]: 
+[0m16:35:57.393766 [debug] [Thread-1 (]: Began running node model.DigitalData.doner_source_union
+[0m16:35:57.393766 [info ] [Thread-1 (]: 1 of 12 START sql view model dbo.doner_source_union ............................ [RUN]
+[0m16:35:57.399693 [debug] [Thread-1 (]: Acquiring new sqlserver connection 'model.DigitalData.doner_source_union'
+[0m16:35:57.400694 [debug] [Thread-1 (]: Began compiling node model.DigitalData.doner_source_union
+[0m16:35:57.481040 [debug] [Thread-1 (]: Using sqlserver connection "model.DigitalData.doner_source_union"
+[0m16:35:57.482038 [debug] [Thread-1 (]: On model.DigitalData.doner_source_union: /* {"app": "dbt", "dbt_version": "1.7.16", "profile_name": "DigitalData", "target_name": "dev", "node_id": "model.DigitalData.doner_source_union"} */
+
+
+    with mapping as (
+        select
+            row_number() over (partition by object_name(c.object_id) order by c.column_id) as ordinal_position,
+            c.name collate database_default as column_name,
+            t.name as data_type,
+            c.max_length as character_maximum_length,
+            c.precision as numeric_precision,
+            c.scale as numeric_scale
+        from [GoogleSheets].sys.columns c 
+        inner join sys.types t 
+        on c.user_type_id = t.user_type_id
+        where c.object_id = object_id('"GoogleSheets"."dbo"."DigitalData_AHA_Google"')
+    )
+
+    select
+        column_name,
+        data_type,
+        character_maximum_length,
+        numeric_precision,
+        numeric_scale
+    from mapping
+    order by ordinal_position
+
+  
+[0m16:35:57.483037 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m16:35:57.484041 [debug] [Thread-1 (]: fabric adapter: Using connection string: DRIVER={ODBC Driver 17 for SQL Server};SERVER=10.10.110.92,8050;Database=GoogleSheets;trusted_connection=Yes;encrypt=Yes;TrustServerCertificate=Yes;APP=dbt-sqlserver/1.7.4;ConnectRetryCount=1
+[0m16:35:57.485040 [debug] [Thread-1 (]: fabric adapter: Connected to db: GoogleSheets
+[0m16:35:57.503909 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m16:35:57.515950 [debug] [Thread-1 (]: Using sqlserver connection "model.DigitalData.doner_source_union"
+[0m16:35:57.517265 [debug] [Thread-1 (]: On model.DigitalData.doner_source_union: /* {"app": "dbt", "dbt_version": "1.7.16", "profile_name": "DigitalData", "target_name": "dev", "node_id": "model.DigitalData.doner_source_union"} */
+
+
+    with mapping as (
+        select
+            row_number() over (partition by object_name(c.object_id) order by c.column_id) as ordinal_position,
+            c.name collate database_default as column_name,
+            t.name as data_type,
+            c.max_length as character_maximum_length,
+            c.precision as numeric_precision,
+            c.scale as numeric_scale
+        from [GoogleSheets].sys.columns c 
+        inner join sys.types t 
+        on c.user_type_id = t.user_type_id
+        where c.object_id = object_id('"GoogleSheets"."dbo"."DigitalData_DetroitZoo_Google"')
+    )
+
+    select
+        column_name,
+        data_type,
+        character_maximum_length,
+        numeric_precision,
+        numeric_scale
+    from mapping
+    order by ordinal_position
+
+  
+[0m16:35:57.533814 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m16:35:57.547821 [debug] [Thread-1 (]: Using sqlserver connection "model.DigitalData.doner_source_union"
+[0m16:35:57.549007 [debug] [Thread-1 (]: On model.DigitalData.doner_source_union: /* {"app": "dbt", "dbt_version": "1.7.16", "profile_name": "DigitalData", "target_name": "dev", "node_id": "model.DigitalData.doner_source_union"} */
+
+
+    with mapping as (
+        select
+            row_number() over (partition by object_name(c.object_id) order by c.column_id) as ordinal_position,
+            c.name collate database_default as column_name,
+            t.name as data_type,
+            c.max_length as character_maximum_length,
+            c.precision as numeric_precision,
+            c.scale as numeric_scale
+        from [GoogleSheets].sys.columns c 
+        inner join sys.types t 
+        on c.user_type_id = t.user_type_id
+        where c.object_id = object_id('"GoogleSheets"."dbo"."DigitalData_HungryHowies_Google LDSM"')
+    )
+
+    select
+        column_name,
+        data_type,
+        character_maximum_length,
+        numeric_precision,
+        numeric_scale
+    from mapping
+    order by ordinal_position
+
+  
+[0m16:35:57.566763 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m16:35:57.578765 [debug] [Thread-1 (]: Using sqlserver connection "model.DigitalData.doner_source_union"
+[0m16:35:57.581157 [debug] [Thread-1 (]: On model.DigitalData.doner_source_union: /* {"app": "dbt", "dbt_version": "1.7.16", "profile_name": "DigitalData", "target_name": "dev", "node_id": "model.DigitalData.doner_source_union"} */
+
+
+    with mapping as (
+        select
+            row_number() over (partition by object_name(c.object_id) order by c.column_id) as ordinal_position,
+            c.name collate database_default as column_name,
+            t.name as data_type,
+            c.max_length as character_maximum_length,
+            c.precision as numeric_precision,
+            c.scale as numeric_scale
+        from [GoogleSheets].sys.columns c 
+        inner join sys.types t 
+        on c.user_type_id = t.user_type_id
+        where c.object_id = object_id('"GoogleSheets"."dbo"."DigitalData_HungryHowies_Google Blitz"')
+    )
+
+    select
+        column_name,
+        data_type,
+        character_maximum_length,
+        numeric_precision,
+        numeric_scale
+    from mapping
+    order by ordinal_position
+
+  
+[0m16:35:57.602546 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m16:35:57.611650 [debug] [Thread-1 (]: Using sqlserver connection "model.DigitalData.doner_source_union"
+[0m16:35:57.611650 [debug] [Thread-1 (]: On model.DigitalData.doner_source_union: /* {"app": "dbt", "dbt_version": "1.7.16", "profile_name": "DigitalData", "target_name": "dev", "node_id": "model.DigitalData.doner_source_union"} */
+
+
+    with mapping as (
+        select
+            row_number() over (partition by object_name(c.object_id) order by c.column_id) as ordinal_position,
+            c.name collate database_default as column_name,
+            t.name as data_type,
+            c.max_length as character_maximum_length,
+            c.precision as numeric_precision,
+            c.scale as numeric_scale
+        from [GoogleSheets].sys.columns c 
+        inner join sys.types t 
+        on c.user_type_id = t.user_type_id
+        where c.object_id = object_id('"GoogleSheets"."dbo"."DigitalData_HungryHowies_Google Mature Markets"')
+    )
+
+    select
+        column_name,
+        data_type,
+        character_maximum_length,
+        numeric_precision,
+        numeric_scale
+    from mapping
+    order by ordinal_position
+
+  
+[0m16:35:57.627316 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m16:35:57.627316 [debug] [Thread-1 (]: Using sqlserver connection "model.DigitalData.doner_source_union"
+[0m16:35:57.642888 [debug] [Thread-1 (]: On model.DigitalData.doner_source_union: /* {"app": "dbt", "dbt_version": "1.7.16", "profile_name": "DigitalData", "target_name": "dev", "node_id": "model.DigitalData.doner_source_union"} */
+
+
+    with mapping as (
+        select
+            row_number() over (partition by object_name(c.object_id) order by c.column_id) as ordinal_position,
+            c.name collate database_default as column_name,
+            t.name as data_type,
+            c.max_length as character_maximum_length,
+            c.precision as numeric_precision,
+            c.scale as numeric_scale
+        from [GoogleSheets].sys.columns c 
+        inner join sys.types t 
+        on c.user_type_id = t.user_type_id
+        where c.object_id = object_id('"GoogleSheets"."dbo"."DigitalData_Motive_Google"')
+    )
+
+    select
+        column_name,
+        data_type,
+        character_maximum_length,
+        numeric_precision,
+        numeric_scale
+    from mapping
+    order by ordinal_position
+
+  
+[0m16:35:57.658573 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m16:35:57.658573 [debug] [Thread-1 (]: Using sqlserver connection "model.DigitalData.doner_source_union"
+[0m16:35:57.658573 [debug] [Thread-1 (]: On model.DigitalData.doner_source_union: /* {"app": "dbt", "dbt_version": "1.7.16", "profile_name": "DigitalData", "target_name": "dev", "node_id": "model.DigitalData.doner_source_union"} */
+
+
+    with mapping as (
+        select
+            row_number() over (partition by object_name(c.object_id) order by c.column_id) as ordinal_position,
+            c.name collate database_default as column_name,
+            t.name as data_type,
+            c.max_length as character_maximum_length,
+            c.precision as numeric_precision,
+            c.scale as numeric_scale
+        from [GoogleSheets].sys.columns c 
+        inner join sys.types t 
+        on c.user_type_id = t.user_type_id
+        where c.object_id = object_id('"GoogleSheets"."dbo"."DigitalData_Sprayway_Google"')
+    )
+
+    select
+        column_name,
+        data_type,
+        character_maximum_length,
+        numeric_precision,
+        numeric_scale
+    from mapping
+    order by ordinal_position
+
+  
+[0m16:35:57.674153 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m16:35:57.689829 [debug] [Thread-1 (]: Using sqlserver connection "model.DigitalData.doner_source_union"
+[0m16:35:57.689829 [debug] [Thread-1 (]: On model.DigitalData.doner_source_union: /* {"app": "dbt", "dbt_version": "1.7.16", "profile_name": "DigitalData", "target_name": "dev", "node_id": "model.DigitalData.doner_source_union"} */
+
+
+    with mapping as (
+        select
+            row_number() over (partition by object_name(c.object_id) order by c.column_id) as ordinal_position,
+            c.name collate database_default as column_name,
+            t.name as data_type,
+            c.max_length as character_maximum_length,
+            c.precision as numeric_precision,
+            c.scale as numeric_scale
+        from [GoogleSheets].sys.columns c 
+        inner join sys.types t 
+        on c.user_type_id = t.user_type_id
+        where c.object_id = object_id('"GoogleSheets"."dbo"."DigitalData_WorldStrides_Google"')
+    )
+
+    select
+        column_name,
+        data_type,
+        character_maximum_length,
+        numeric_precision,
+        numeric_scale
+    from mapping
+    order by ordinal_position
+
+  
+[0m16:35:57.705378 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m16:35:57.736573 [debug] [Thread-1 (]: Writing injected SQL for node "model.DigitalData.doner_source_union"
+[0m16:35:57.736573 [debug] [Thread-1 (]: Timing info for model.DigitalData.doner_source_union (compile): 16:35:57.401694 => 16:35:57.736573
+[0m16:35:57.736573 [debug] [Thread-1 (]: Began executing node model.DigitalData.doner_source_union
+[0m16:35:57.799068 [debug] [Thread-1 (]: Using sqlserver connection "model.DigitalData.doner_source_union"
+[0m16:35:57.799068 [debug] [Thread-1 (]: On model.DigitalData.doner_source_union: /* {"app": "dbt", "dbt_version": "1.7.16", "profile_name": "DigitalData", "target_name": "dev", "node_id": "model.DigitalData.doner_source_union"} */
+
+      USE [GoogleSheets];
+      select
+          sch.name as schema_name,
+          obj.name as view_name
+      from sys.sql_expression_dependencies refs
+      inner join sys.objects obj
+      on refs.referencing_id = obj.object_id
+      inner join sys.schemas sch
+      on obj.schema_id = sch.schema_id
+      where refs.referenced_database_name = 'GoogleSheets'
+      and refs.referenced_schema_name = 'dbo'
+      and refs.referenced_entity_name = 'doner_source_union__dbt_backup'
+      and refs.referencing_class = 1
+      and obj.type = 'V'
+      
+[0m16:35:57.861542 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m16:35:57.861542 [debug] [Thread-1 (]: Using sqlserver connection "model.DigitalData.doner_source_union"
+[0m16:35:57.861542 [debug] [Thread-1 (]: On model.DigitalData.doner_source_union: /* {"app": "dbt", "dbt_version": "1.7.16", "profile_name": "DigitalData", "target_name": "dev", "node_id": "model.DigitalData.doner_source_union"} */
+
+      
+      
+    
+    USE [GoogleSheets];
+    EXEC('DROP view IF EXISTS "dbo"."doner_source_union__dbt_backup";');
+
+[0m16:35:57.861542 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m16:35:57.877231 [debug] [Thread-1 (]: Using sqlserver connection "model.DigitalData.doner_source_union"
+[0m16:35:57.877231 [debug] [Thread-1 (]: On model.DigitalData.doner_source_union: /* {"app": "dbt", "dbt_version": "1.7.16", "profile_name": "DigitalData", "target_name": "dev", "node_id": "model.DigitalData.doner_source_union"} */
+select
+      table_catalog as [database],
+      table_name as [name],
+      table_schema as [schema],
+      case when table_type = 'BASE TABLE' then 'table'
+           when table_type = 'VIEW' then 'view'
+           else table_type
+      end as table_type
+
+    from INFORMATION_SCHEMA.TABLES 
+    where table_schema like 'dbo'
+    and table_name like 'doner_source_union'
+  
+[0m16:35:57.892785 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m16:35:57.908454 [debug] [Thread-1 (]: Writing runtime sql for node "model.DigitalData.doner_source_union"
+[0m16:35:57.908454 [debug] [Thread-1 (]: Using sqlserver connection "model.DigitalData.doner_source_union"
+[0m16:35:57.908454 [debug] [Thread-1 (]: On model.DigitalData.doner_source_union: /* {"app": "dbt", "dbt_version": "1.7.16", "profile_name": "DigitalData", "target_name": "dev", "node_id": "model.DigitalData.doner_source_union"} */
+USE [GoogleSheets];
+    
+    
+
+    EXEC('create view "dbo"."doner_source_union" as 
+
+
+    
+
+        (
+            select
+                cast(''"GoogleSheets"."dbo"."DigitalData_AHA_Google"'' as VARCHAR(8000)) as _dbt_source_relation,
+
+                
+                    cast("Date" as varchar(1000)) as "Date" ,
+                    cast("Ad Group ID" as varchar(1000)) as "Ad Group ID" ,
+                    cast("Ad Group Name" as varchar(1000)) as "Ad Group Name" ,
+                    cast("Ad ID" as varchar(1000)) as "Ad ID" ,
+                    cast("Ad Labels" as varchar(1000)) as "Ad Labels" ,
+                    cast("Ad Type" as varchar(1000)) as "Ad Type" ,
+                    cast("Campaign" as varchar(1000)) as "Campaign" ,
+                    cast("Campaign ID" as varchar(1000)) as "Campaign ID" ,
+                    cast("Campaign Type" as varchar(1000)) as "Campaign Type" ,
+                    cast("GoogleAds_Paid_ConversionName" as varchar(1000)) as "GoogleAds_Paid_ConversionName" ,
+                    cast("Clicks" as varchar(1000)) as "Clicks" ,
+                    cast("Cost (USD)" as varchar(1000)) as "Cost (USD)" ,
+                    cast("Impressions" as varchar(1000)) as "Impressions" ,
+                    cast("Video Played To 100%" as varchar(1000)) as "Video Played To 100%" ,
+                    cast("Video Played To 25%" as varchar(1000)) as "Video Played To 25%" ,
+                    cast("Video Played To 50%" as varchar(1000)) as "Video Played To 50%" ,
+                    cast("Video Played To 75%" as varchar(1000)) as "Video Played To 75%" ,
+                    cast("GoogleAds_Paid_Conversions" as varchar(1000)) as "GoogleAds_Paid_Conversions" ,
+                    cast("Views (100%)" as varchar(1000)) as "Views (100%)" ,
+                    cast("Views (25%)" as varchar(1000)) as "Views (25%)" ,
+                    cast("Views (50%)" as varchar(1000)) as "Views (50%)" ,
+                    cast("Views (75%)" as varchar(1000)) as "Views (75%)" ,
+                    cast("Data Source name" as varchar(1000)) as "Data Source name" ,
+                    cast("Conversions" as varchar(1000)) as "Conversions" ,
+                    cast("Ad" as varchar(1000)) as "Ad" ,
+                    cast("Ad Name" as varchar(1000)) as "Ad Name" ,
+                    cast("Ad Final Urls" as varchar(1000)) as "Ad Final Urls" 
+
+            from "GoogleSheets"."dbo"."DigitalData_AHA_Google"
+
+            
+        )
+
+        union all
+        
+
+        (
+            select
+                cast(''"GoogleSheets"."dbo"."DigitalData_DetroitZoo_Google"'' as VARCHAR(8000)) as _dbt_source_relation,
+
+                
+                    cast("Date" as varchar(1000)) as "Date" ,
+                    cast("Ad Group ID" as varchar(1000)) as "Ad Group ID" ,
+                    cast("Ad Group Name" as varchar(1000)) as "Ad Group Name" ,
+                    cast("Ad ID" as varchar(1000)) as "Ad ID" ,
+                    cast("Ad Labels" as varchar(1000)) as "Ad Labels" ,
+                    cast("Ad Type" as varchar(1000)) as "Ad Type" ,
+                    cast("Campaign" as varchar(1000)) as "Campaign" ,
+                    cast("Campaign ID" as varchar(1000)) as "Campaign ID" ,
+                    cast("Campaign Type" as varchar(1000)) as "Campaign Type" ,
+                    cast("GoogleAds_Paid_ConversionName" as varchar(1000)) as "GoogleAds_Paid_ConversionName" ,
+                    cast("Clicks" as varchar(1000)) as "Clicks" ,
+                    cast("Cost (USD)" as varchar(1000)) as "Cost (USD)" ,
+                    cast("Impressions" as varchar(1000)) as "Impressions" ,
+                    cast("Video Played To 100%" as varchar(1000)) as "Video Played To 100%" ,
+                    cast("Video Played To 25%" as varchar(1000)) as "Video Played To 25%" ,
+                    cast("Video Played To 50%" as varchar(1000)) as "Video Played To 50%" ,
+                    cast("Video Played To 75%" as varchar(1000)) as "Video Played To 75%" ,
+                    cast("GoogleAds_Paid_Conversions" as varchar(1000)) as "GoogleAds_Paid_Conversions" ,
+                    cast("Views (100%)" as varchar(1000)) as "Views (100%)" ,
+                    cast("Views (25%)" as varchar(1000)) as "Views (25%)" ,
+                    cast("Views (50%)" as varchar(1000)) as "Views (50%)" ,
+                    cast("Views (75%)" as varchar(1000)) as "Views (75%)" ,
+                    cast("Data Source name" as varchar(1000)) as "Data Source name" ,
+                    cast("Conversions" as varchar(1000)) as "Conversions" ,
+                    cast("Ad" as varchar(1000)) as "Ad" ,
+                    cast("Ad Name" as varchar(1000)) as "Ad Name" ,
+                    cast("Ad Final Urls" as varchar(1000)) as "Ad Final Urls" 
+
+            from "GoogleSheets"."dbo"."DigitalData_DetroitZoo_Google"
+
+            
+        )
+
+        union all
+        
+
+        (
+            select
+                cast(''"GoogleSheets"."dbo"."DigitalData_HungryHowies_Google LDSM"'' as VARCHAR(8000)) as _dbt_source_relation,
+
+                
+                    cast("Date" as varchar(1000)) as "Date" ,
+                    cast("Ad Group ID" as varchar(1000)) as "Ad Group ID" ,
+                    cast("Ad Group Name" as varchar(1000)) as "Ad Group Name" ,
+                    cast("Ad ID" as varchar(1000)) as "Ad ID" ,
+                    cast("Ad Labels" as varchar(1000)) as "Ad Labels" ,
+                    cast("Ad Type" as varchar(1000)) as "Ad Type" ,
+                    cast("Campaign" as varchar(1000)) as "Campaign" ,
+                    cast("Campaign ID" as varchar(1000)) as "Campaign ID" ,
+                    cast("Campaign Type" as varchar(1000)) as "Campaign Type" ,
+                    cast("GoogleAds_Paid_ConversionName" as varchar(1000)) as "GoogleAds_Paid_ConversionName" ,
+                    cast("Clicks" as varchar(1000)) as "Clicks" ,
+                    cast("Cost (USD)" as varchar(1000)) as "Cost (USD)" ,
+                    cast("Impressions" as varchar(1000)) as "Impressions" ,
+                    cast("Video Played To 100%" as varchar(1000)) as "Video Played To 100%" ,
+                    cast("Video Played To 25%" as varchar(1000)) as "Video Played To 25%" ,
+                    cast("Video Played To 50%" as varchar(1000)) as "Video Played To 50%" ,
+                    cast("Video Played To 75%" as varchar(1000)) as "Video Played To 75%" ,
+                    cast("GoogleAds_Paid_Conversions" as varchar(1000)) as "GoogleAds_Paid_Conversions" ,
+                    cast("Views (100%)" as varchar(1000)) as "Views (100%)" ,
+                    cast("Views (25%)" as varchar(1000)) as "Views (25%)" ,
+                    cast("Views (50%)" as varchar(1000)) as "Views (50%)" ,
+                    cast("Views (75%)" as varchar(1000)) as "Views (75%)" ,
+                    cast("Data Source name" as varchar(1000)) as "Data Source name" ,
+                    cast("Conversions" as varchar(1000)) as "Conversions" ,
+                    cast("Ad" as varchar(1000)) as "Ad" ,
+                    cast("Ad Name" as varchar(1000)) as "Ad Name" ,
+                    cast("Ad Final Urls" as varchar(1000)) as "Ad Final Urls" 
+
+            from "GoogleSheets"."dbo"."DigitalData_HungryHowies_Google LDSM"
+
+            
+        )
+
+        union all
+        
+
+        (
+            select
+                cast(''"GoogleSheets"."dbo"."DigitalData_HungryHowies_Google Blitz"'' as VARCHAR(8000)) as _dbt_source_relation,
+
+                
+                    cast("Date" as varchar(1000)) as "Date" ,
+                    cast("Ad Group ID" as varchar(1000)) as "Ad Group ID" ,
+                    cast("Ad Group Name" as varchar(1000)) as "Ad Group Name" ,
+                    cast("Ad ID" as varchar(1000)) as "Ad ID" ,
+                    cast("Ad Labels" as varchar(1000)) as "Ad Labels" ,
+                    cast("Ad Type" as varchar(1000)) as "Ad Type" ,
+                    cast("Campaign" as varchar(1000)) as "Campaign" ,
+                    cast("Campaign ID" as varchar(1000)) as "Campaign ID" ,
+                    cast("Campaign Type" as varchar(1000)) as "Campaign Type" ,
+                    cast("GoogleAds_Paid_ConversionName" as varchar(1000)) as "GoogleAds_Paid_ConversionName" ,
+                    cast("Clicks" as varchar(1000)) as "Clicks" ,
+                    cast("Cost (USD)" as varchar(1000)) as "Cost (USD)" ,
+                    cast("Impressions" as varchar(1000)) as "Impressions" ,
+                    cast("Video Played To 100%" as varchar(1000)) as "Video Played To 100%" ,
+                    cast("Video Played To 25%" as varchar(1000)) as "Video Played To 25%" ,
+                    cast("Video Played To 50%" as varchar(1000)) as "Video Played To 50%" ,
+                    cast("Video Played To 75%" as varchar(1000)) as "Video Played To 75%" ,
+                    cast("GoogleAds_Paid_Conversions" as varchar(1000)) as "GoogleAds_Paid_Conversions" ,
+                    cast("Views (100%)" as varchar(1000)) as "Views (100%)" ,
+                    cast("Views (25%)" as varchar(1000)) as "Views (25%)" ,
+                    cast("Views (50%)" as varchar(1000)) as "Views (50%)" ,
+                    cast("Views (75%)" as varchar(1000)) as "Views (75%)" ,
+                    cast("Data Source name" as varchar(1000)) as "Data Source name" ,
+                    cast("Conversions" as varchar(1000)) as "Conversions" ,
+                    cast("Ad" as varchar(1000)) as "Ad" ,
+                    cast("Ad Name" as varchar(1000)) as "Ad Name" ,
+                    cast("Ad Final Urls" as varchar(1000)) as "Ad Final Urls" 
+
+            from "GoogleSheets"."dbo"."DigitalData_HungryHowies_Google Blitz"
+
+            
+        )
+
+        union all
+        
+
+        (
+            select
+                cast(''"GoogleSheets"."dbo"."DigitalData_HungryHowies_Google Mature Markets"'' as VARCHAR(8000)) as _dbt_source_relation,
+
+                
+                    cast("Date" as varchar(1000)) as "Date" ,
+                    cast("Ad Group ID" as varchar(1000)) as "Ad Group ID" ,
+                    cast("Ad Group Name" as varchar(1000)) as "Ad Group Name" ,
+                    cast("Ad ID" as varchar(1000)) as "Ad ID" ,
+                    cast("Ad Labels" as varchar(1000)) as "Ad Labels" ,
+                    cast("Ad Type" as varchar(1000)) as "Ad Type" ,
+                    cast("Campaign" as varchar(1000)) as "Campaign" ,
+                    cast("Campaign ID" as varchar(1000)) as "Campaign ID" ,
+                    cast("Campaign Type" as varchar(1000)) as "Campaign Type" ,
+                    cast("GoogleAds_Paid_ConversionName" as varchar(1000)) as "GoogleAds_Paid_ConversionName" ,
+                    cast("Clicks" as varchar(1000)) as "Clicks" ,
+                    cast("Cost (USD)" as varchar(1000)) as "Cost (USD)" ,
+                    cast("Impressions" as varchar(1000)) as "Impressions" ,
+                    cast("Video Played To 100%" as varchar(1000)) as "Video Played To 100%" ,
+                    cast("Video Played To 25%" as varchar(1000)) as "Video Played To 25%" ,
+                    cast("Video Played To 50%" as varchar(1000)) as "Video Played To 50%" ,
+                    cast("Video Played To 75%" as varchar(1000)) as "Video Played To 75%" ,
+                    cast("GoogleAds_Paid_Conversions" as varchar(1000)) as "GoogleAds_Paid_Conversions" ,
+                    cast("Views (100%)" as varchar(1000)) as "Views (100%)" ,
+                    cast("Views (25%)" as varchar(1000)) as "Views (25%)" ,
+                    cast("Views (50%)" as varchar(1000)) as "Views (50%)" ,
+                    cast("Views (75%)" as varchar(1000)) as "Views (75%)" ,
+                    cast("Data Source name" as varchar(1000)) as "Data Source name" ,
+                    cast("Conversions" as varchar(1000)) as "Conversions" ,
+                    cast("Ad" as varchar(1000)) as "Ad" ,
+                    cast("Ad Name" as varchar(1000)) as "Ad Name" ,
+                    cast("Ad Final Urls" as varchar(1000)) as "Ad Final Urls" 
+
+            from "GoogleSheets"."dbo"."DigitalData_HungryHowies_Google Mature Markets"
+
+            
+        )
+
+        union all
+        
+
+        (
+            select
+                cast(''"GoogleSheets"."dbo"."DigitalData_Motive_Google"'' as VARCHAR(8000)) as _dbt_source_relation,
+
+                
+                    cast("Date" as varchar(1000)) as "Date" ,
+                    cast("Ad Group ID" as varchar(1000)) as "Ad Group ID" ,
+                    cast("Ad Group Name" as varchar(1000)) as "Ad Group Name" ,
+                    cast("Ad ID" as varchar(1000)) as "Ad ID" ,
+                    cast("Ad Labels" as varchar(1000)) as "Ad Labels" ,
+                    cast("Ad Type" as varchar(1000)) as "Ad Type" ,
+                    cast("Campaign" as varchar(1000)) as "Campaign" ,
+                    cast("Campaign ID" as varchar(1000)) as "Campaign ID" ,
+                    cast("Campaign Type" as varchar(1000)) as "Campaign Type" ,
+                    cast("GoogleAds_Paid_ConversionName" as varchar(1000)) as "GoogleAds_Paid_ConversionName" ,
+                    cast("Clicks" as varchar(1000)) as "Clicks" ,
+                    cast("Cost (USD)" as varchar(1000)) as "Cost (USD)" ,
+                    cast("Impressions" as varchar(1000)) as "Impressions" ,
+                    cast("Video Played To 100%" as varchar(1000)) as "Video Played To 100%" ,
+                    cast("Video Played To 25%" as varchar(1000)) as "Video Played To 25%" ,
+                    cast("Video Played To 50%" as varchar(1000)) as "Video Played To 50%" ,
+                    cast("Video Played To 75%" as varchar(1000)) as "Video Played To 75%" ,
+                    cast("GoogleAds_Paid_Conversions" as varchar(1000)) as "GoogleAds_Paid_Conversions" ,
+                    cast("Views (100%)" as varchar(1000)) as "Views (100%)" ,
+                    cast("Views (25%)" as varchar(1000)) as "Views (25%)" ,
+                    cast("Views (50%)" as varchar(1000)) as "Views (50%)" ,
+                    cast("Views (75%)" as varchar(1000)) as "Views (75%)" ,
+                    cast("Data Source name" as varchar(1000)) as "Data Source name" ,
+                    cast("Conversions" as varchar(1000)) as "Conversions" ,
+                    cast("Ad" as varchar(1000)) as "Ad" ,
+                    cast("Ad Name" as varchar(1000)) as "Ad Name" ,
+                    cast("Ad Final Urls" as varchar(1000)) as "Ad Final Urls" 
+
+            from "GoogleSheets"."dbo"."DigitalData_Motive_Google"
+
+            
+        )
+
+        union all
+        
+
+        (
+            select
+                cast(''"GoogleSheets"."dbo"."DigitalData_Sprayway_Google"'' as VARCHAR(8000)) as _dbt_source_relation,
+
+                
+                    cast("Date" as varchar(1000)) as "Date" ,
+                    cast("Ad Group ID" as varchar(1000)) as "Ad Group ID" ,
+                    cast("Ad Group Name" as varchar(1000)) as "Ad Group Name" ,
+                    cast("Ad ID" as varchar(1000)) as "Ad ID" ,
+                    cast("Ad Labels" as varchar(1000)) as "Ad Labels" ,
+                    cast("Ad Type" as varchar(1000)) as "Ad Type" ,
+                    cast("Campaign" as varchar(1000)) as "Campaign" ,
+                    cast("Campaign ID" as varchar(1000)) as "Campaign ID" ,
+                    cast("Campaign Type" as varchar(1000)) as "Campaign Type" ,
+                    cast("GoogleAds_Paid_ConversionName" as varchar(1000)) as "GoogleAds_Paid_ConversionName" ,
+                    cast("Clicks" as varchar(1000)) as "Clicks" ,
+                    cast("Cost (USD)" as varchar(1000)) as "Cost (USD)" ,
+                    cast("Impressions" as varchar(1000)) as "Impressions" ,
+                    cast("Video Played To 100%" as varchar(1000)) as "Video Played To 100%" ,
+                    cast("Video Played To 25%" as varchar(1000)) as "Video Played To 25%" ,
+                    cast("Video Played To 50%" as varchar(1000)) as "Video Played To 50%" ,
+                    cast("Video Played To 75%" as varchar(1000)) as "Video Played To 75%" ,
+                    cast("GoogleAds_Paid_Conversions" as varchar(1000)) as "GoogleAds_Paid_Conversions" ,
+                    cast("Views (100%)" as varchar(1000)) as "Views (100%)" ,
+                    cast("Views (25%)" as varchar(1000)) as "Views (25%)" ,
+                    cast("Views (50%)" as varchar(1000)) as "Views (50%)" ,
+                    cast("Views (75%)" as varchar(1000)) as "Views (75%)" ,
+                    cast("Data Source name" as varchar(1000)) as "Data Source name" ,
+                    cast("Conversions" as varchar(1000)) as "Conversions" ,
+                    cast("Ad" as varchar(1000)) as "Ad" ,
+                    cast("Ad Name" as varchar(1000)) as "Ad Name" ,
+                    cast("Ad Final Urls" as varchar(1000)) as "Ad Final Urls" 
+
+            from "GoogleSheets"."dbo"."DigitalData_Sprayway_Google"
+
+            
+        )
+
+        union all
+        
+
+        (
+            select
+                cast(''"GoogleSheets"."dbo"."DigitalData_WorldStrides_Google"'' as VARCHAR(8000)) as _dbt_source_relation,
+
+                
+                    cast("Date" as varchar(1000)) as "Date" ,
+                    cast("Ad Group ID" as varchar(1000)) as "Ad Group ID" ,
+                    cast("Ad Group Name" as varchar(1000)) as "Ad Group Name" ,
+                    cast("Ad ID" as varchar(1000)) as "Ad ID" ,
+                    cast("Ad Labels" as varchar(1000)) as "Ad Labels" ,
+                    cast("Ad Type" as varchar(1000)) as "Ad Type" ,
+                    cast("Campaign" as varchar(1000)) as "Campaign" ,
+                    cast("Campaign ID" as varchar(1000)) as "Campaign ID" ,
+                    cast("Campaign Type" as varchar(1000)) as "Campaign Type" ,
+                    cast("GoogleAds_Paid_ConversionName" as varchar(1000)) as "GoogleAds_Paid_ConversionName" ,
+                    cast("Clicks" as varchar(1000)) as "Clicks" ,
+                    cast("Cost (USD)" as varchar(1000)) as "Cost (USD)" ,
+                    cast("Impressions" as varchar(1000)) as "Impressions" ,
+                    cast("Video Played To 100%" as varchar(1000)) as "Video Played To 100%" ,
+                    cast("Video Played To 25%" as varchar(1000)) as "Video Played To 25%" ,
+                    cast("Video Played To 50%" as varchar(1000)) as "Video Played To 50%" ,
+                    cast("Video Played To 75%" as varchar(1000)) as "Video Played To 75%" ,
+                    cast("GoogleAds_Paid_Conversions" as varchar(1000)) as "GoogleAds_Paid_Conversions" ,
+                    cast("Views (100%)" as varchar(1000)) as "Views (100%)" ,
+                    cast("Views (25%)" as varchar(1000)) as "Views (25%)" ,
+                    cast("Views (50%)" as varchar(1000)) as "Views (50%)" ,
+                    cast("Views (75%)" as varchar(1000)) as "Views (75%)" ,
+                    cast("Data Source name" as varchar(1000)) as "Data Source name" ,
+                    cast("Conversions" as varchar(1000)) as "Conversions" ,
+                    cast("Ad" as varchar(1000)) as "Ad" ,
+                    cast("Ad Name" as varchar(1000)) as "Ad Name" ,
+                    cast("Ad Final Urls" as varchar(1000)) as "Ad Final Urls" 
+
+            from "GoogleSheets"."dbo"."DigitalData_WorldStrides_Google"
+
+            
+        )
+
+        ;');
+
+
+
+[0m16:35:58.002123 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m16:35:58.033329 [debug] [Thread-1 (]: On model.DigitalData.doner_source_union: COMMIT
+[0m16:35:58.033329 [debug] [Thread-1 (]: Using sqlserver connection "model.DigitalData.doner_source_union"
+[0m16:35:58.033329 [debug] [Thread-1 (]: On model.DigitalData.doner_source_union: /* {"app": "dbt", "dbt_version": "1.7.16", "profile_name": "DigitalData", "target_name": "dev", "node_id": "model.DigitalData.doner_source_union"} */
+
+      USE [GoogleSheets];
+      select
+          sch.name as schema_name,
+          obj.name as view_name
+      from sys.sql_expression_dependencies refs
+      inner join sys.objects obj
+      on refs.referencing_id = obj.object_id
+      inner join sys.schemas sch
+      on obj.schema_id = sch.schema_id
+      where refs.referenced_database_name = 'GoogleSheets'
+      and refs.referenced_schema_name = 'dbo'
+      and refs.referenced_entity_name = 'doner_source_union__dbt_backup'
+      and refs.referencing_class = 1
+      and obj.type = 'V'
+      
+[0m16:35:58.048947 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m16:35:58.051703 [debug] [Thread-1 (]: Using sqlserver connection "model.DigitalData.doner_source_union"
+[0m16:35:58.052710 [debug] [Thread-1 (]: On model.DigitalData.doner_source_union: /* {"app": "dbt", "dbt_version": "1.7.16", "profile_name": "DigitalData", "target_name": "dev", "node_id": "model.DigitalData.doner_source_union"} */
+
+      
+      
+    
+    USE [GoogleSheets];
+    EXEC('DROP view IF EXISTS "dbo"."doner_source_union__dbt_backup";');
+
+[0m16:35:58.055719 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m16:35:58.058735 [debug] [Thread-1 (]: Timing info for model.DigitalData.doner_source_union (execute): 16:35:57.736573 => 16:35:58.058735
+[0m16:35:58.059730 [debug] [Thread-1 (]: On model.DigitalData.doner_source_union: ROLLBACK
+[0m16:35:58.060750 [debug] [Thread-1 (]: On model.DigitalData.doner_source_union: Close
+[0m16:35:58.062872 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '05f8709e-35d8-4b06-9bc8-e23288bb3bc5', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A299076510>]}
+[0m16:35:58.064770 [info ] [Thread-1 (]: 1 of 12 OK created sql view model dbo.doner_source_union ....................... [[32mOK[0m in 0.66s]
+[0m16:35:58.066758 [debug] [Thread-1 (]: Finished running node model.DigitalData.doner_source_union
+[0m16:35:58.066758 [debug] [Thread-1 (]: Began running node model.DigitalData.doner
+[0m16:35:58.066758 [info ] [Thread-1 (]: 2 of 12 START sql view model dbo.doner ......................................... [RUN]
+[0m16:35:58.071739 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.DigitalData.doner_source_union, now model.DigitalData.doner)
+[0m16:35:58.072738 [debug] [Thread-1 (]: Began compiling node model.DigitalData.doner
+[0m16:35:58.082013 [debug] [Thread-1 (]: Writing injected SQL for node "model.DigitalData.doner"
+[0m16:35:58.085009 [debug] [Thread-1 (]: Timing info for model.DigitalData.doner (compile): 16:35:58.073736 => 16:35:58.084006
+[0m16:35:58.086051 [debug] [Thread-1 (]: Began executing node model.DigitalData.doner
+[0m16:35:58.096919 [debug] [Thread-1 (]: Using sqlserver connection "model.DigitalData.doner"
+[0m16:35:58.098197 [debug] [Thread-1 (]: On model.DigitalData.doner: /* {"app": "dbt", "dbt_version": "1.7.16", "profile_name": "DigitalData", "target_name": "dev", "node_id": "model.DigitalData.doner"} */
+
+      USE [GoogleSheets];
+      select
+          sch.name as schema_name,
+          obj.name as view_name
+      from sys.sql_expression_dependencies refs
+      inner join sys.objects obj
+      on refs.referencing_id = obj.object_id
+      inner join sys.schemas sch
+      on obj.schema_id = sch.schema_id
+      where refs.referenced_database_name = 'GoogleSheets'
+      and refs.referenced_schema_name = 'dbo'
+      and refs.referenced_entity_name = 'doner__dbt_backup'
+      and refs.referencing_class = 1
+      and obj.type = 'V'
+      
+[0m16:35:58.100196 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m16:35:58.101236 [debug] [Thread-1 (]: fabric adapter: Using connection string: DRIVER={ODBC Driver 17 for SQL Server};SERVER=10.10.110.92,8050;Database=GoogleSheets;trusted_connection=Yes;encrypt=Yes;TrustServerCertificate=Yes;APP=dbt-sqlserver/1.7.4;ConnectRetryCount=1
+[0m16:35:58.102240 [debug] [Thread-1 (]: fabric adapter: Connected to db: GoogleSheets
+[0m16:35:58.125112 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m16:35:58.130618 [debug] [Thread-1 (]: Using sqlserver connection "model.DigitalData.doner"
+[0m16:35:58.131578 [debug] [Thread-1 (]: On model.DigitalData.doner: /* {"app": "dbt", "dbt_version": "1.7.16", "profile_name": "DigitalData", "target_name": "dev", "node_id": "model.DigitalData.doner"} */
+
+      
+      
+    
+    USE [GoogleSheets];
+    EXEC('DROP view IF EXISTS "dbo"."doner__dbt_backup";');
+
+[0m16:35:58.133616 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m16:35:58.136613 [debug] [Thread-1 (]: Using sqlserver connection "model.DigitalData.doner"
+[0m16:35:58.137581 [debug] [Thread-1 (]: On model.DigitalData.doner: /* {"app": "dbt", "dbt_version": "1.7.16", "profile_name": "DigitalData", "target_name": "dev", "node_id": "model.DigitalData.doner"} */
+select
+      table_catalog as [database],
+      table_name as [name],
+      table_schema as [schema],
+      case when table_type = 'BASE TABLE' then 'table'
+           when table_type = 'VIEW' then 'view'
+           else table_type
+      end as table_type
+
+    from INFORMATION_SCHEMA.TABLES 
+    where table_schema like 'dbo'
+    and table_name like 'doner'
+  
+[0m16:35:58.153058 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m16:35:58.158049 [debug] [Thread-1 (]: Writing runtime sql for node "model.DigitalData.doner"
+[0m16:35:58.158458 [debug] [Thread-1 (]: Using sqlserver connection "model.DigitalData.doner"
+[0m16:35:58.162721 [debug] [Thread-1 (]: On model.DigitalData.doner: /* {"app": "dbt", "dbt_version": "1.7.16", "profile_name": "DigitalData", "target_name": "dev", "node_id": "model.DigitalData.doner"} */
+USE [GoogleSheets];
+    
+    
+
+    EXEC('create view "dbo"."doner" as with maintable as (
+    select
+        [Date],
+        -- case statement to create PMAX off of ad group id
+        case
+            when len(trim([Ad Group ID])) = 0 and [Campaign Type] = ''PERFORMANCE_MAX''
+                then concat([Campaign ID],''_PMAX'')
+            else [Ad Group ID]
+        end as adgroupid,
+        --case statement to create PMAX off of ad group name
+        case
+            when len(trim([Ad Group Name]))=0 and [Campaign Type]=''PERFORMANCE_MAX''
+                then concat([Campaign],''PMAX'')
+            else [Ad Group Name]
+        end as adgroupname_platform,
+        -- case statement to create PMAX off of ad id
+        case
+            when len(trim([Ad ID]))=0 and [Campaign Type]= ''PERFORMANCE_MAX''
+                then concat([Campaign ID], ''_PMAX'')
+            else [Ad ID]
+        end as adid,
+        -- case statement to create adname_platform
+        case
+            when len(trim([Ad Labels])) > 0
+                then [Ad Labels]
+            when len(trim([Ad Name])) > 0
+                then [Ad Name]
+            else NULL
+        end AS adname_platform,
+        [Ad Type] as adtype,
+        [Campaign] as campaignname_platform,
+        [Campaign ID] as campaignid,
+        [Campaign Type] as campaigntype,
+        --case statement to create conversion type
+        case
+            when len([GoogleAds_Paid_ConversionName]) > 0
+                then [GoogleAds_Paid_ConversionName]
+            when len([GoogleAds_Paid_ConversionName]) = 0
+                then NULL
+        end as conversiontype,
+        cast([Clicks] as float) as Clicks,
+        cast([Cost (USD)] as float) as cost,
+        cast([Impressions] as float) as Impressions,
+        cast([Video Played To 100%] as float) as video100percent,
+        cast([Video Played To 25%] as float) as video25percent,
+        cast([Video Played To 50%] as float)as video50percent,
+        cast([Video Played To 75%] as float) as video75percent,
+        GoogleAds_Paid_Conversions,
+        [Views (100%)],
+        [Views (25%)],
+        [Views (50%)],
+        [Views (75%)],
+        PARSENAME(REPLACE([Data Source name], ''|'', ''.''), 4) AS client, --parse data source to create client
+        PARSENAME(REPLACE([Data Source Name], ''|'', ''.''), 3) AS property, --parse data source to create property
+        Conversions,
+        [Ad Final Urls] as ad_final_urls
+    from "GoogleSheets"."dbo"."doner_source_union"
+),
+
+
+
+maintable_two as (
+    select
+        [Date],
+        adgroupid,
+        adgroupname_platform,
+        adid,
+        adtype,
+        campaignname_platform,
+        campaignid,
+        campaigntype,
+        conversiontype,
+        Clicks,
+        cost,
+        Impressions,
+        video100percent,
+        video25percent,
+        video50percent,
+        video75percent,
+        GoogleAds_Paid_Conversions,
+        [Views (100%)],
+        [Views (25%)],
+        [Views (50%)],
+        [Views (75%)],
+        client,
+        property,
+        Conversions,
+        ad_final_urls,
+        ''GoogleAds'' as platform,
+        case
+            when len(trim([adname_platform])) = 0 and [campaigntype] = ''PERFORMANCE_MAX''
+                then concat(''PMAX '', [campaignname_platform])
+            else [adname_platform]
+        end as adname_platform
+    from maintable
+)
+
+select * from maintable_two;');
+
+
+
+[0m16:35:58.175791 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m16:35:58.179469 [debug] [Thread-1 (]: On model.DigitalData.doner: COMMIT
+[0m16:35:58.184946 [debug] [Thread-1 (]: Using sqlserver connection "model.DigitalData.doner"
+[0m16:35:58.185986 [debug] [Thread-1 (]: On model.DigitalData.doner: /* {"app": "dbt", "dbt_version": "1.7.16", "profile_name": "DigitalData", "target_name": "dev", "node_id": "model.DigitalData.doner"} */
+
+      USE [GoogleSheets];
+      select
+          sch.name as schema_name,
+          obj.name as view_name
+      from sys.sql_expression_dependencies refs
+      inner join sys.objects obj
+      on refs.referencing_id = obj.object_id
+      inner join sys.schemas sch
+      on obj.schema_id = sch.schema_id
+      where refs.referenced_database_name = 'GoogleSheets'
+      and refs.referenced_schema_name = 'dbo'
+      and refs.referenced_entity_name = 'doner__dbt_backup'
+      and refs.referencing_class = 1
+      and obj.type = 'V'
+      
+[0m16:35:58.190269 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m16:35:58.193328 [debug] [Thread-1 (]: Using sqlserver connection "model.DigitalData.doner"
+[0m16:35:58.194318 [debug] [Thread-1 (]: On model.DigitalData.doner: /* {"app": "dbt", "dbt_version": "1.7.16", "profile_name": "DigitalData", "target_name": "dev", "node_id": "model.DigitalData.doner"} */
+
+      
+      
+    
+    USE [GoogleSheets];
+    EXEC('DROP view IF EXISTS "dbo"."doner__dbt_backup";');
+
+[0m16:35:58.197122 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m16:35:58.200173 [debug] [Thread-1 (]: Timing info for model.DigitalData.doner (execute): 16:35:58.087039 => 16:35:58.199179
+[0m16:35:58.201169 [debug] [Thread-1 (]: On model.DigitalData.doner: ROLLBACK
+[0m16:35:58.202135 [debug] [Thread-1 (]: On model.DigitalData.doner: Close
+[0m16:35:58.203173 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '05f8709e-35d8-4b06-9bc8-e23288bb3bc5', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A299076510>]}
+[0m16:35:58.205135 [info ] [Thread-1 (]: 2 of 12 OK created sql view model dbo.doner .................................... [[32mOK[0m in 0.13s]
+[0m16:35:58.206751 [debug] [Thread-1 (]: Finished running node model.DigitalData.doner
+[0m16:35:58.208757 [debug] [Thread-1 (]: Began running node test.DigitalData.not_null_doner_adgroupid.f582dc6c51
+[0m16:35:58.210764 [info ] [Thread-1 (]: 3 of 12 START test not_null_doner_adgroupid .................................... [RUN]
+[0m16:35:58.212755 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.DigitalData.doner, now test.DigitalData.not_null_doner_adgroupid.f582dc6c51)
+[0m16:35:58.212967 [debug] [Thread-1 (]: Began compiling node test.DigitalData.not_null_doner_adgroupid.f582dc6c51
+[0m16:35:58.237427 [debug] [Thread-1 (]: Writing injected SQL for node "test.DigitalData.not_null_doner_adgroupid.f582dc6c51"
+[0m16:35:58.240461 [debug] [Thread-1 (]: Timing info for test.DigitalData.not_null_doner_adgroupid.f582dc6c51 (compile): 16:35:58.214107 => 16:35:58.240461
+[0m16:35:58.241428 [debug] [Thread-1 (]: Began executing node test.DigitalData.not_null_doner_adgroupid.f582dc6c51
+[0m16:35:58.273458 [debug] [Thread-1 (]: Writing runtime sql for node "test.DigitalData.not_null_doner_adgroupid.f582dc6c51"
+[0m16:35:58.276419 [debug] [Thread-1 (]: Using sqlserver connection "test.DigitalData.not_null_doner_adgroupid.f582dc6c51"
+[0m16:35:58.277413 [debug] [Thread-1 (]: On test.DigitalData.not_null_doner_adgroupid.f582dc6c51: /* {"app": "dbt", "dbt_version": "1.7.16", "profile_name": "DigitalData", "target_name": "dev", "node_id": "test.DigitalData.not_null_doner_adgroupid.f582dc6c51"} */
+select
+      
+      count(*) as failures,
+      case when count(*) != 0
+        then 'true' else 'false' end as should_warn,
+      case when count(*) != 0
+        then 'true' else 'false' end as should_error
+    from (
+      
+    
+    
+
+
+
+select adgroupid
+from "GoogleSheets"."dbo"."doner"
+where adgroupid is null
+
+
+
+    ) dbt_internal_test
+[0m16:35:58.278426 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m16:35:58.279412 [debug] [Thread-1 (]: fabric adapter: Using connection string: DRIVER={ODBC Driver 17 for SQL Server};SERVER=10.10.110.92,8050;Database=GoogleSheets;trusted_connection=Yes;encrypt=Yes;TrustServerCertificate=Yes;APP=dbt-sqlserver/1.7.4;ConnectRetryCount=1
+[0m16:35:58.281418 [debug] [Thread-1 (]: fabric adapter: Connected to db: GoogleSheets
+[0m16:35:59.580869 [debug] [Thread-1 (]: SQL status: OK in 1.0 seconds
+[0m16:35:59.580869 [debug] [Thread-1 (]: Timing info for test.DigitalData.not_null_doner_adgroupid.f582dc6c51 (execute): 16:35:58.242439 => 16:35:59.580869
+[0m16:35:59.580869 [debug] [Thread-1 (]: On test.DigitalData.not_null_doner_adgroupid.f582dc6c51: ROLLBACK
+[0m16:35:59.580869 [debug] [Thread-1 (]: On test.DigitalData.not_null_doner_adgroupid.f582dc6c51: Close
+[0m16:35:59.580869 [info ] [Thread-1 (]: 3 of 12 PASS not_null_doner_adgroupid .......................................... [[32mPASS[0m in 1.37s]
+[0m16:35:59.580869 [debug] [Thread-1 (]: Finished running node test.DigitalData.not_null_doner_adgroupid.f582dc6c51
+[0m16:35:59.580869 [debug] [Thread-1 (]: Began running node test.DigitalData.not_null_doner_adid.44697e1ee9
+[0m16:35:59.596515 [info ] [Thread-1 (]: 4 of 12 START test not_null_doner_adid ......................................... [RUN]
+[0m16:35:59.596515 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.DigitalData.not_null_doner_adgroupid.f582dc6c51, now test.DigitalData.not_null_doner_adid.44697e1ee9)
+[0m16:35:59.596515 [debug] [Thread-1 (]: Began compiling node test.DigitalData.not_null_doner_adid.44697e1ee9
+[0m16:35:59.596515 [debug] [Thread-1 (]: Writing injected SQL for node "test.DigitalData.not_null_doner_adid.44697e1ee9"
+[0m16:35:59.612124 [debug] [Thread-1 (]: Timing info for test.DigitalData.not_null_doner_adid.44697e1ee9 (compile): 16:35:59.596515 => 16:35:59.596515
+[0m16:35:59.612124 [debug] [Thread-1 (]: Began executing node test.DigitalData.not_null_doner_adid.44697e1ee9
+[0m16:35:59.619152 [debug] [Thread-1 (]: Writing runtime sql for node "test.DigitalData.not_null_doner_adid.44697e1ee9"
+[0m16:35:59.621151 [debug] [Thread-1 (]: Using sqlserver connection "test.DigitalData.not_null_doner_adid.44697e1ee9"
+[0m16:35:59.622149 [debug] [Thread-1 (]: On test.DigitalData.not_null_doner_adid.44697e1ee9: /* {"app": "dbt", "dbt_version": "1.7.16", "profile_name": "DigitalData", "target_name": "dev", "node_id": "test.DigitalData.not_null_doner_adid.44697e1ee9"} */
+select
+      
+      count(*) as failures,
+      case when count(*) != 0
+        then 'true' else 'false' end as should_warn,
+      case when count(*) != 0
+        then 'true' else 'false' end as should_error
+    from (
+      
+    
+    
+
+
+
+select adid
+from "GoogleSheets"."dbo"."doner"
+where adid is null
+
+
+
+    ) dbt_internal_test
+[0m16:35:59.623152 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m16:35:59.624150 [debug] [Thread-1 (]: fabric adapter: Using connection string: DRIVER={ODBC Driver 17 for SQL Server};SERVER=10.10.110.92,8050;Database=GoogleSheets;trusted_connection=Yes;encrypt=Yes;TrustServerCertificate=Yes;APP=dbt-sqlserver/1.7.4;ConnectRetryCount=1
+[0m16:35:59.625149 [debug] [Thread-1 (]: fabric adapter: Connected to db: GoogleSheets
+[0m16:35:59.926786 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m16:35:59.930728 [debug] [Thread-1 (]: Timing info for test.DigitalData.not_null_doner_adid.44697e1ee9 (execute): 16:35:59.614149 => 16:35:59.930728
+[0m16:35:59.931728 [debug] [Thread-1 (]: On test.DigitalData.not_null_doner_adid.44697e1ee9: ROLLBACK
+[0m16:35:59.932766 [debug] [Thread-1 (]: On test.DigitalData.not_null_doner_adid.44697e1ee9: Close
+[0m16:35:59.939752 [info ] [Thread-1 (]: 4 of 12 PASS not_null_doner_adid ............................................... [[32mPASS[0m in 0.34s]
+[0m16:35:59.942729 [debug] [Thread-1 (]: Finished running node test.DigitalData.not_null_doner_adid.44697e1ee9
+[0m16:35:59.950164 [debug] [Thread-1 (]: Began running node model.DigitalData.ad
+[0m16:35:59.951167 [info ] [Thread-1 (]: 5 of 12 START sql view model dbo.ad ............................................ [RUN]
+[0m16:35:59.953170 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.DigitalData.not_null_doner_adid.44697e1ee9, now model.DigitalData.ad)
+[0m16:35:59.954210 [debug] [Thread-1 (]: Began compiling node model.DigitalData.ad
+[0m16:35:59.960479 [debug] [Thread-1 (]: Writing injected SQL for node "model.DigitalData.ad"
+[0m16:35:59.963339 [debug] [Thread-1 (]: Timing info for model.DigitalData.ad (compile): 16:35:59.955331 => 16:35:59.963339
+[0m16:35:59.964333 [debug] [Thread-1 (]: Began executing node model.DigitalData.ad
+[0m16:35:59.972664 [debug] [Thread-1 (]: Using sqlserver connection "model.DigitalData.ad"
+[0m16:35:59.972664 [debug] [Thread-1 (]: On model.DigitalData.ad: /* {"app": "dbt", "dbt_version": "1.7.16", "profile_name": "DigitalData", "target_name": "dev", "node_id": "model.DigitalData.ad"} */
+
+      USE [GoogleSheets];
+      select
+          sch.name as schema_name,
+          obj.name as view_name
+      from sys.sql_expression_dependencies refs
+      inner join sys.objects obj
+      on refs.referencing_id = obj.object_id
+      inner join sys.schemas sch
+      on obj.schema_id = sch.schema_id
+      where refs.referenced_database_name = 'GoogleSheets'
+      and refs.referenced_schema_name = 'dbo'
+      and refs.referenced_entity_name = 'ad__dbt_backup'
+      and refs.referencing_class = 1
+      and obj.type = 'V'
+      
+[0m16:35:59.977128 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m16:35:59.978130 [debug] [Thread-1 (]: fabric adapter: Using connection string: DRIVER={ODBC Driver 17 for SQL Server};SERVER=10.10.110.92,8050;Database=GoogleSheets;trusted_connection=Yes;encrypt=Yes;TrustServerCertificate=Yes;APP=dbt-sqlserver/1.7.4;ConnectRetryCount=1
+[0m16:35:59.979176 [debug] [Thread-1 (]: fabric adapter: Connected to db: GoogleSheets
+[0m16:35:59.998130 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m16:36:00.005118 [debug] [Thread-1 (]: Using sqlserver connection "model.DigitalData.ad"
+[0m16:36:00.005118 [debug] [Thread-1 (]: On model.DigitalData.ad: /* {"app": "dbt", "dbt_version": "1.7.16", "profile_name": "DigitalData", "target_name": "dev", "node_id": "model.DigitalData.ad"} */
+
+      
+      
+    
+    USE [GoogleSheets];
+    EXEC('DROP view IF EXISTS "dbo"."ad__dbt_backup";');
+
+[0m16:36:00.017391 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m16:36:00.021686 [debug] [Thread-1 (]: Using sqlserver connection "model.DigitalData.ad"
+[0m16:36:00.022662 [debug] [Thread-1 (]: On model.DigitalData.ad: /* {"app": "dbt", "dbt_version": "1.7.16", "profile_name": "DigitalData", "target_name": "dev", "node_id": "model.DigitalData.ad"} */
+select
+      table_catalog as [database],
+      table_name as [name],
+      table_schema as [schema],
+      case when table_type = 'BASE TABLE' then 'table'
+           when table_type = 'VIEW' then 'view'
+           else table_type
+      end as table_type
+
+    from INFORMATION_SCHEMA.TABLES 
+    where table_schema like 'dbo'
+    and table_name like 'ad'
+  
+[0m16:36:00.034961 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m16:36:00.042156 [debug] [Thread-1 (]: Writing runtime sql for node "model.DigitalData.ad"
+[0m16:36:00.045011 [debug] [Thread-1 (]: Using sqlserver connection "model.DigitalData.ad"
+[0m16:36:00.046043 [debug] [Thread-1 (]: On model.DigitalData.ad: /* {"app": "dbt", "dbt_version": "1.7.16", "profile_name": "DigitalData", "target_name": "dev", "node_id": "model.DigitalData.ad"} */
+USE [GoogleSheets];
+    
+    
+
+    EXEC('create view "dbo"."ad" as with ad_staging as (
+    select
+        adgroupid,
+        adid,
+        client,
+        property,
+        adname_platform,
+        platform,
+        cast(getdate() as date) as load_date,
+        row_number() over (partition by adgroupid, adid order by adgroupid, adid) as row_num
+    from "GoogleSheets"."dbo"."doner"
+    where conversiontype is null
+    group by
+    adgroupid,
+    adid,
+    client,
+    property,
+    adname_platform,
+    platform
+)
+
+select
+adgroupid,
+adid,
+client,
+property,
+adname_platform,
+platform,
+load_date,
+row_num
+from ad_staging
+where row_num = 1;');
+
+
+
+[0m16:36:00.060716 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m16:36:00.065713 [debug] [Thread-1 (]: On model.DigitalData.ad: COMMIT
+[0m16:36:00.071714 [debug] [Thread-1 (]: Using sqlserver connection "model.DigitalData.ad"
+[0m16:36:00.072715 [debug] [Thread-1 (]: On model.DigitalData.ad: /* {"app": "dbt", "dbt_version": "1.7.16", "profile_name": "DigitalData", "target_name": "dev", "node_id": "model.DigitalData.ad"} */
+
+      USE [GoogleSheets];
+      select
+          sch.name as schema_name,
+          obj.name as view_name
+      from sys.sql_expression_dependencies refs
+      inner join sys.objects obj
+      on refs.referencing_id = obj.object_id
+      inner join sys.schemas sch
+      on obj.schema_id = sch.schema_id
+      where refs.referenced_database_name = 'GoogleSheets'
+      and refs.referenced_schema_name = 'dbo'
+      and refs.referenced_entity_name = 'ad__dbt_backup'
+      and refs.referencing_class = 1
+      and obj.type = 'V'
+      
+[0m16:36:00.076716 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m16:36:00.078713 [debug] [Thread-1 (]: Using sqlserver connection "model.DigitalData.ad"
+[0m16:36:00.079714 [debug] [Thread-1 (]: On model.DigitalData.ad: /* {"app": "dbt", "dbt_version": "1.7.16", "profile_name": "DigitalData", "target_name": "dev", "node_id": "model.DigitalData.ad"} */
+
+      
+      
+    
+    USE [GoogleSheets];
+    EXEC('DROP view IF EXISTS "dbo"."ad__dbt_backup";');
+
+[0m16:36:00.082466 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m16:36:00.085468 [debug] [Thread-1 (]: Timing info for model.DigitalData.ad (execute): 16:35:59.965338 => 16:36:00.084468
+[0m16:36:00.086496 [debug] [Thread-1 (]: On model.DigitalData.ad: ROLLBACK
+[0m16:36:00.087529 [debug] [Thread-1 (]: On model.DigitalData.ad: Close
+[0m16:36:00.089474 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '05f8709e-35d8-4b06-9bc8-e23288bb3bc5', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A299CC6510>]}
+[0m16:36:00.090469 [info ] [Thread-1 (]: 5 of 12 OK created sql view model dbo.ad ....................................... [[32mOK[0m in 0.14s]
+[0m16:36:00.092471 [debug] [Thread-1 (]: Finished running node model.DigitalData.ad
+[0m16:36:00.093470 [debug] [Thread-1 (]: Began running node model.DigitalData.ad_attributes
+[0m16:36:00.095471 [info ] [Thread-1 (]: 6 of 12 START sql view model dbo.ad_attributes ................................. [RUN]
+[0m16:36:00.097469 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.DigitalData.ad, now model.DigitalData.ad_attributes)
+[0m16:36:00.098769 [debug] [Thread-1 (]: Began compiling node model.DigitalData.ad_attributes
+[0m16:36:00.103771 [debug] [Thread-1 (]: Writing injected SQL for node "model.DigitalData.ad_attributes"
+[0m16:36:00.106805 [debug] [Thread-1 (]: Timing info for model.DigitalData.ad_attributes (compile): 16:36:00.098769 => 16:36:00.105773
+[0m16:36:00.107820 [debug] [Thread-1 (]: Began executing node model.DigitalData.ad_attributes
+[0m16:36:00.121964 [debug] [Thread-1 (]: Using sqlserver connection "model.DigitalData.ad_attributes"
+[0m16:36:00.122965 [debug] [Thread-1 (]: On model.DigitalData.ad_attributes: /* {"app": "dbt", "dbt_version": "1.7.16", "profile_name": "DigitalData", "target_name": "dev", "node_id": "model.DigitalData.ad_attributes"} */
+
+      USE [GoogleSheets];
+      select
+          sch.name as schema_name,
+          obj.name as view_name
+      from sys.sql_expression_dependencies refs
+      inner join sys.objects obj
+      on refs.referencing_id = obj.object_id
+      inner join sys.schemas sch
+      on obj.schema_id = sch.schema_id
+      where refs.referenced_database_name = 'GoogleSheets'
+      and refs.referenced_schema_name = 'dbo'
+      and refs.referenced_entity_name = 'ad_attributes__dbt_backup'
+      and refs.referencing_class = 1
+      and obj.type = 'V'
+      
+[0m16:36:00.124962 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m16:36:00.126108 [debug] [Thread-1 (]: fabric adapter: Using connection string: DRIVER={ODBC Driver 17 for SQL Server};SERVER=10.10.110.92,8050;Database=GoogleSheets;trusted_connection=Yes;encrypt=Yes;TrustServerCertificate=Yes;APP=dbt-sqlserver/1.7.4;ConnectRetryCount=1
+[0m16:36:00.127276 [debug] [Thread-1 (]: fabric adapter: Connected to db: GoogleSheets
+[0m16:36:00.150414 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m16:36:00.156414 [debug] [Thread-1 (]: Using sqlserver connection "model.DigitalData.ad_attributes"
+[0m16:36:00.157470 [debug] [Thread-1 (]: On model.DigitalData.ad_attributes: /* {"app": "dbt", "dbt_version": "1.7.16", "profile_name": "DigitalData", "target_name": "dev", "node_id": "model.DigitalData.ad_attributes"} */
+
+      
+      
+    
+    USE [GoogleSheets];
+    EXEC('DROP view IF EXISTS "dbo"."ad_attributes__dbt_backup";');
+
+[0m16:36:00.160415 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m16:36:00.163418 [debug] [Thread-1 (]: Using sqlserver connection "model.DigitalData.ad_attributes"
+[0m16:36:00.164249 [debug] [Thread-1 (]: On model.DigitalData.ad_attributes: /* {"app": "dbt", "dbt_version": "1.7.16", "profile_name": "DigitalData", "target_name": "dev", "node_id": "model.DigitalData.ad_attributes"} */
+select
+      table_catalog as [database],
+      table_name as [name],
+      table_schema as [schema],
+      case when table_type = 'BASE TABLE' then 'table'
+           when table_type = 'VIEW' then 'view'
+           else table_type
+      end as table_type
+
+    from INFORMATION_SCHEMA.TABLES 
+    where table_schema like 'dbo'
+    and table_name like 'ad_attributes'
+  
+[0m16:36:00.177507 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m16:36:00.181505 [debug] [Thread-1 (]: Writing runtime sql for node "model.DigitalData.ad_attributes"
+[0m16:36:00.183504 [debug] [Thread-1 (]: Using sqlserver connection "model.DigitalData.ad_attributes"
+[0m16:36:00.184503 [debug] [Thread-1 (]: On model.DigitalData.ad_attributes: /* {"app": "dbt", "dbt_version": "1.7.16", "profile_name": "DigitalData", "target_name": "dev", "node_id": "model.DigitalData.ad_attributes"} */
+USE [GoogleSheets];
+    
+    
+
+    EXEC('create view "dbo"."ad_attributes" as with ad_attributes as (
+    select
+        adgroupid,
+        adid,
+        client,
+        property,
+        platform,
+        cast(getdate() as date) as load_date
+    from "GoogleSheets"."dbo"."doner"
+    where conversiontype is null
+    group by
+    adgroupid,
+    adid,
+    client,
+    property,
+    platform
+)
+
+select * from ad_attributes;');
+
+
+
+[0m16:36:00.193534 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m16:36:00.197534 [debug] [Thread-1 (]: On model.DigitalData.ad_attributes: COMMIT
+[0m16:36:00.293448 [debug] [Thread-1 (]: Using sqlserver connection "model.DigitalData.ad_attributes"
+[0m16:36:00.294483 [debug] [Thread-1 (]: On model.DigitalData.ad_attributes: /* {"app": "dbt", "dbt_version": "1.7.16", "profile_name": "DigitalData", "target_name": "dev", "node_id": "model.DigitalData.ad_attributes"} */
+
+      USE [GoogleSheets];
+      select
+          sch.name as schema_name,
+          obj.name as view_name
+      from sys.sql_expression_dependencies refs
+      inner join sys.objects obj
+      on refs.referencing_id = obj.object_id
+      inner join sys.schemas sch
+      on obj.schema_id = sch.schema_id
+      where refs.referenced_database_name = 'GoogleSheets'
+      and refs.referenced_schema_name = 'dbo'
+      and refs.referenced_entity_name = 'ad_attributes__dbt_backup'
+      and refs.referencing_class = 1
+      and obj.type = 'V'
+      
+[0m16:36:00.298448 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m16:36:00.299570 [debug] [Thread-1 (]: Using sqlserver connection "model.DigitalData.ad_attributes"
+[0m16:36:00.299570 [debug] [Thread-1 (]: On model.DigitalData.ad_attributes: /* {"app": "dbt", "dbt_version": "1.7.16", "profile_name": "DigitalData", "target_name": "dev", "node_id": "model.DigitalData.ad_attributes"} */
+
+      
+      
+    
+    USE [GoogleSheets];
+    EXEC('DROP view IF EXISTS "dbo"."ad_attributes__dbt_backup";');
+
+[0m16:36:00.299570 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m16:36:00.299570 [debug] [Thread-1 (]: Timing info for model.DigitalData.ad_attributes (execute): 16:36:00.107820 => 16:36:00.299570
+[0m16:36:00.299570 [debug] [Thread-1 (]: On model.DigitalData.ad_attributes: ROLLBACK
+[0m16:36:00.299570 [debug] [Thread-1 (]: On model.DigitalData.ad_attributes: Close
+[0m16:36:00.299570 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '05f8709e-35d8-4b06-9bc8-e23288bb3bc5', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A29A0AF490>]}
+[0m16:36:00.299570 [info ] [Thread-1 (]: 6 of 12 OK created sql view model dbo.ad_attributes ............................ [[32mOK[0m in 0.20s]
+[0m16:36:00.299570 [debug] [Thread-1 (]: Finished running node model.DigitalData.ad_attributes
+[0m16:36:00.315241 [debug] [Thread-1 (]: Began running node model.DigitalData.ad_group
+[0m16:36:00.315241 [info ] [Thread-1 (]: 7 of 12 START sql view model dbo.ad_group ...................................... [RUN]
+[0m16:36:00.315241 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.DigitalData.ad_attributes, now model.DigitalData.ad_group)
+[0m16:36:00.315241 [debug] [Thread-1 (]: Began compiling node model.DigitalData.ad_group
+[0m16:36:00.315241 [debug] [Thread-1 (]: Writing injected SQL for node "model.DigitalData.ad_group"
+[0m16:36:00.315241 [debug] [Thread-1 (]: Timing info for model.DigitalData.ad_group (compile): 16:36:00.315241 => 16:36:00.315241
+[0m16:36:00.315241 [debug] [Thread-1 (]: Began executing node model.DigitalData.ad_group
+[0m16:36:00.330267 [debug] [Thread-1 (]: Using sqlserver connection "model.DigitalData.ad_group"
+[0m16:36:00.330267 [debug] [Thread-1 (]: On model.DigitalData.ad_group: /* {"app": "dbt", "dbt_version": "1.7.16", "profile_name": "DigitalData", "target_name": "dev", "node_id": "model.DigitalData.ad_group"} */
+
+      USE [GoogleSheets];
+      select
+          sch.name as schema_name,
+          obj.name as view_name
+      from sys.sql_expression_dependencies refs
+      inner join sys.objects obj
+      on refs.referencing_id = obj.object_id
+      inner join sys.schemas sch
+      on obj.schema_id = sch.schema_id
+      where refs.referenced_database_name = 'GoogleSheets'
+      and refs.referenced_schema_name = 'dbo'
+      and refs.referenced_entity_name = 'ad_group__dbt_backup'
+      and refs.referencing_class = 1
+      and obj.type = 'V'
+      
+[0m16:36:00.330267 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m16:36:00.330267 [debug] [Thread-1 (]: fabric adapter: Using connection string: DRIVER={ODBC Driver 17 for SQL Server};SERVER=10.10.110.92,8050;Database=GoogleSheets;trusted_connection=Yes;encrypt=Yes;TrustServerCertificate=Yes;APP=dbt-sqlserver/1.7.4;ConnectRetryCount=1
+[0m16:36:00.330267 [debug] [Thread-1 (]: fabric adapter: Connected to db: GoogleSheets
+[0m16:36:00.364733 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m16:36:00.367730 [debug] [Thread-1 (]: Using sqlserver connection "model.DigitalData.ad_group"
+[0m16:36:00.368701 [debug] [Thread-1 (]: On model.DigitalData.ad_group: /* {"app": "dbt", "dbt_version": "1.7.16", "profile_name": "DigitalData", "target_name": "dev", "node_id": "model.DigitalData.ad_group"} */
+
+      
+      
+    
+    USE [GoogleSheets];
+    EXEC('DROP view IF EXISTS "dbo"."ad_group__dbt_backup";');
+
+[0m16:36:00.371695 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m16:36:00.376694 [debug] [Thread-1 (]: Using sqlserver connection "model.DigitalData.ad_group"
+[0m16:36:00.377755 [debug] [Thread-1 (]: On model.DigitalData.ad_group: /* {"app": "dbt", "dbt_version": "1.7.16", "profile_name": "DigitalData", "target_name": "dev", "node_id": "model.DigitalData.ad_group"} */
+select
+      table_catalog as [database],
+      table_name as [name],
+      table_schema as [schema],
+      case when table_type = 'BASE TABLE' then 'table'
+           when table_type = 'VIEW' then 'view'
+           else table_type
+      end as table_type
+
+    from INFORMATION_SCHEMA.TABLES 
+    where table_schema like 'dbo'
+    and table_name like 'ad_group'
+  
+[0m16:36:00.389740 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m16:36:00.393782 [debug] [Thread-1 (]: Writing runtime sql for node "model.DigitalData.ad_group"
+[0m16:36:00.395888 [debug] [Thread-1 (]: Using sqlserver connection "model.DigitalData.ad_group"
+[0m16:36:00.396905 [debug] [Thread-1 (]: On model.DigitalData.ad_group: /* {"app": "dbt", "dbt_version": "1.7.16", "profile_name": "DigitalData", "target_name": "dev", "node_id": "model.DigitalData.ad_group"} */
+USE [GoogleSheets];
+    
+    
+
+    EXEC('create view "dbo"."ad_group" as with ad_group as (
+    select
+        adgroupid,
+        adgroupname_platform,
+        client,
+        property,
+        campaignid,
+        platform,
+        cast(getdate() as date) as load_date
+    from "GoogleSheets"."dbo"."doner"
+    where conversiontype is null
+    group by
+    adgroupid,
+    adgroupname_platform,
+    client,
+    property,
+    campaignid,
+    platform
+)
+
+select * from ad_group;');
+
+
+
+[0m16:36:00.402888 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m16:36:00.405898 [debug] [Thread-1 (]: On model.DigitalData.ad_group: COMMIT
+[0m16:36:00.411733 [debug] [Thread-1 (]: Using sqlserver connection "model.DigitalData.ad_group"
+[0m16:36:00.413710 [debug] [Thread-1 (]: On model.DigitalData.ad_group: /* {"app": "dbt", "dbt_version": "1.7.16", "profile_name": "DigitalData", "target_name": "dev", "node_id": "model.DigitalData.ad_group"} */
+
+      USE [GoogleSheets];
+      select
+          sch.name as schema_name,
+          obj.name as view_name
+      from sys.sql_expression_dependencies refs
+      inner join sys.objects obj
+      on refs.referencing_id = obj.object_id
+      inner join sys.schemas sch
+      on obj.schema_id = sch.schema_id
+      where refs.referenced_database_name = 'GoogleSheets'
+      and refs.referenced_schema_name = 'dbo'
+      and refs.referenced_entity_name = 'ad_group__dbt_backup'
+      and refs.referencing_class = 1
+      and obj.type = 'V'
+      
+[0m16:36:00.416759 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m16:36:00.419797 [debug] [Thread-1 (]: Using sqlserver connection "model.DigitalData.ad_group"
+[0m16:36:00.420747 [debug] [Thread-1 (]: On model.DigitalData.ad_group: /* {"app": "dbt", "dbt_version": "1.7.16", "profile_name": "DigitalData", "target_name": "dev", "node_id": "model.DigitalData.ad_group"} */
+
+      
+      
+    
+    USE [GoogleSheets];
+    EXEC('DROP view IF EXISTS "dbo"."ad_group__dbt_backup";');
+
+[0m16:36:00.422721 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m16:36:00.426813 [debug] [Thread-1 (]: Timing info for model.DigitalData.ad_group (execute): 16:36:00.315241 => 16:36:00.426167
+[0m16:36:00.426987 [debug] [Thread-1 (]: On model.DigitalData.ad_group: ROLLBACK
+[0m16:36:00.428991 [debug] [Thread-1 (]: On model.DigitalData.ad_group: Close
+[0m16:36:00.429992 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '05f8709e-35d8-4b06-9bc8-e23288bb3bc5', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A29A04ED50>]}
+[0m16:36:00.431993 [info ] [Thread-1 (]: 7 of 12 OK created sql view model dbo.ad_group ................................. [[32mOK[0m in 0.11s]
+[0m16:36:00.434045 [debug] [Thread-1 (]: Finished running node model.DigitalData.ad_group
+[0m16:36:00.435202 [debug] [Thread-1 (]: Began running node model.DigitalData.adgroup_attributes
+[0m16:36:00.435993 [info ] [Thread-1 (]: 8 of 12 START sql view model dbo.adgroup_attributes ............................ [RUN]
+[0m16:36:00.437989 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.DigitalData.ad_group, now model.DigitalData.adgroup_attributes)
+[0m16:36:00.439027 [debug] [Thread-1 (]: Began compiling node model.DigitalData.adgroup_attributes
+[0m16:36:00.445073 [debug] [Thread-1 (]: Writing injected SQL for node "model.DigitalData.adgroup_attributes"
+[0m16:36:00.447037 [debug] [Thread-1 (]: Timing info for model.DigitalData.adgroup_attributes (compile): 16:36:00.440034 => 16:36:00.447037
+[0m16:36:00.448036 [debug] [Thread-1 (]: Began executing node model.DigitalData.adgroup_attributes
+[0m16:36:00.458112 [debug] [Thread-1 (]: Using sqlserver connection "model.DigitalData.adgroup_attributes"
+[0m16:36:00.459155 [debug] [Thread-1 (]: On model.DigitalData.adgroup_attributes: /* {"app": "dbt", "dbt_version": "1.7.16", "profile_name": "DigitalData", "target_name": "dev", "node_id": "model.DigitalData.adgroup_attributes"} */
+
+      USE [GoogleSheets];
+      select
+          sch.name as schema_name,
+          obj.name as view_name
+      from sys.sql_expression_dependencies refs
+      inner join sys.objects obj
+      on refs.referencing_id = obj.object_id
+      inner join sys.schemas sch
+      on obj.schema_id = sch.schema_id
+      where refs.referenced_database_name = 'GoogleSheets'
+      and refs.referenced_schema_name = 'dbo'
+      and refs.referenced_entity_name = 'adgroup_attributes__dbt_backup'
+      and refs.referencing_class = 1
+      and obj.type = 'V'
+      
+[0m16:36:00.460131 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m16:36:00.462121 [debug] [Thread-1 (]: fabric adapter: Using connection string: DRIVER={ODBC Driver 17 for SQL Server};SERVER=10.10.110.92,8050;Database=GoogleSheets;trusted_connection=Yes;encrypt=Yes;TrustServerCertificate=Yes;APP=dbt-sqlserver/1.7.4;ConnectRetryCount=1
+[0m16:36:00.463151 [debug] [Thread-1 (]: fabric adapter: Connected to db: GoogleSheets
+[0m16:36:00.487417 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m16:36:00.490414 [debug] [Thread-1 (]: Using sqlserver connection "model.DigitalData.adgroup_attributes"
+[0m16:36:00.491192 [debug] [Thread-1 (]: On model.DigitalData.adgroup_attributes: /* {"app": "dbt", "dbt_version": "1.7.16", "profile_name": "DigitalData", "target_name": "dev", "node_id": "model.DigitalData.adgroup_attributes"} */
+
+      
+      
+    
+    USE [GoogleSheets];
+    EXEC('DROP view IF EXISTS "dbo"."adgroup_attributes__dbt_backup";');
+
+[0m16:36:00.494198 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m16:36:00.496196 [debug] [Thread-1 (]: Using sqlserver connection "model.DigitalData.adgroup_attributes"
+[0m16:36:00.497192 [debug] [Thread-1 (]: On model.DigitalData.adgroup_attributes: /* {"app": "dbt", "dbt_version": "1.7.16", "profile_name": "DigitalData", "target_name": "dev", "node_id": "model.DigitalData.adgroup_attributes"} */
+select
+      table_catalog as [database],
+      table_name as [name],
+      table_schema as [schema],
+      case when table_type = 'BASE TABLE' then 'table'
+           when table_type = 'VIEW' then 'view'
+           else table_type
+      end as table_type
+
+    from INFORMATION_SCHEMA.TABLES 
+    where table_schema like 'dbo'
+    and table_name like 'adgroup_attributes'
+  
+[0m16:36:00.509909 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m16:36:00.513871 [debug] [Thread-1 (]: Writing runtime sql for node "model.DigitalData.adgroup_attributes"
+[0m16:36:00.515872 [debug] [Thread-1 (]: Using sqlserver connection "model.DigitalData.adgroup_attributes"
+[0m16:36:00.516872 [debug] [Thread-1 (]: On model.DigitalData.adgroup_attributes: /* {"app": "dbt", "dbt_version": "1.7.16", "profile_name": "DigitalData", "target_name": "dev", "node_id": "model.DigitalData.adgroup_attributes"} */
+USE [GoogleSheets];
+    
+    
+
+    EXEC('create view "dbo"."adgroup_attributes" as with adgroup_attributes as (
+    select
+        adgroupid,
+        client,
+        property,
+        platform,
+        cast(getdate() as date) as load_date
+    from "GoogleSheets"."dbo"."doner"
+    where conversiontype is null
+    group by
+    adgroupid,
+    client,
+    property,
+    platform
+    )
+
+select * from adgroup_attributes;');
+
+
+
+[0m16:36:00.522954 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m16:36:00.525919 [debug] [Thread-1 (]: On model.DigitalData.adgroup_attributes: COMMIT
+[0m16:36:00.531918 [debug] [Thread-1 (]: Using sqlserver connection "model.DigitalData.adgroup_attributes"
+[0m16:36:00.533369 [debug] [Thread-1 (]: On model.DigitalData.adgroup_attributes: /* {"app": "dbt", "dbt_version": "1.7.16", "profile_name": "DigitalData", "target_name": "dev", "node_id": "model.DigitalData.adgroup_attributes"} */
+
+      USE [GoogleSheets];
+      select
+          sch.name as schema_name,
+          obj.name as view_name
+      from sys.sql_expression_dependencies refs
+      inner join sys.objects obj
+      on refs.referencing_id = obj.object_id
+      inner join sys.schemas sch
+      on obj.schema_id = sch.schema_id
+      where refs.referenced_database_name = 'GoogleSheets'
+      and refs.referenced_schema_name = 'dbo'
+      and refs.referenced_entity_name = 'adgroup_attributes__dbt_backup'
+      and refs.referencing_class = 1
+      and obj.type = 'V'
+      
+[0m16:36:00.536369 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m16:36:00.539408 [debug] [Thread-1 (]: Using sqlserver connection "model.DigitalData.adgroup_attributes"
+[0m16:36:00.540405 [debug] [Thread-1 (]: On model.DigitalData.adgroup_attributes: /* {"app": "dbt", "dbt_version": "1.7.16", "profile_name": "DigitalData", "target_name": "dev", "node_id": "model.DigitalData.adgroup_attributes"} */
+
+      
+      
+    
+    USE [GoogleSheets];
+    EXEC('DROP view IF EXISTS "dbo"."adgroup_attributes__dbt_backup";');
+
+[0m16:36:00.542452 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m16:36:00.545371 [debug] [Thread-1 (]: Timing info for model.DigitalData.adgroup_attributes (execute): 16:36:00.449034 => 16:36:00.545371
+[0m16:36:00.546406 [debug] [Thread-1 (]: On model.DigitalData.adgroup_attributes: ROLLBACK
+[0m16:36:00.547365 [debug] [Thread-1 (]: On model.DigitalData.adgroup_attributes: Close
+[0m16:36:00.549471 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '05f8709e-35d8-4b06-9bc8-e23288bb3bc5', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A29A0B5190>]}
+[0m16:36:00.550664 [info ] [Thread-1 (]: 8 of 12 OK created sql view model dbo.adgroup_attributes ....................... [[32mOK[0m in 0.11s]
+[0m16:36:00.553313 [debug] [Thread-1 (]: Finished running node model.DigitalData.adgroup_attributes
+[0m16:36:00.554607 [debug] [Thread-1 (]: Began running node model.DigitalData.campaign
+[0m16:36:00.555815 [info ] [Thread-1 (]: 9 of 12 START sql view model dbo.campaign ...................................... [RUN]
+[0m16:36:00.558083 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.DigitalData.adgroup_attributes, now model.DigitalData.campaign)
+[0m16:36:00.559136 [debug] [Thread-1 (]: Began compiling node model.DigitalData.campaign
+[0m16:36:00.568658 [debug] [Thread-1 (]: Writing injected SQL for node "model.DigitalData.campaign"
+[0m16:36:00.572426 [debug] [Thread-1 (]: Timing info for model.DigitalData.campaign (compile): 16:36:00.559710 => 16:36:00.571787
+[0m16:36:00.573641 [debug] [Thread-1 (]: Began executing node model.DigitalData.campaign
+[0m16:36:00.583563 [debug] [Thread-1 (]: Using sqlserver connection "model.DigitalData.campaign"
+[0m16:36:00.584755 [debug] [Thread-1 (]: On model.DigitalData.campaign: /* {"app": "dbt", "dbt_version": "1.7.16", "profile_name": "DigitalData", "target_name": "dev", "node_id": "model.DigitalData.campaign"} */
+
+      USE [GoogleSheets];
+      select
+          sch.name as schema_name,
+          obj.name as view_name
+      from sys.sql_expression_dependencies refs
+      inner join sys.objects obj
+      on refs.referencing_id = obj.object_id
+      inner join sys.schemas sch
+      on obj.schema_id = sch.schema_id
+      where refs.referenced_database_name = 'GoogleSheets'
+      and refs.referenced_schema_name = 'dbo'
+      and refs.referenced_entity_name = 'campaign__dbt_backup'
+      and refs.referencing_class = 1
+      and obj.type = 'V'
+      
+[0m16:36:00.586246 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m16:36:00.587423 [debug] [Thread-1 (]: fabric adapter: Using connection string: DRIVER={ODBC Driver 17 for SQL Server};SERVER=10.10.110.92,8050;Database=GoogleSheets;trusted_connection=Yes;encrypt=Yes;TrustServerCertificate=Yes;APP=dbt-sqlserver/1.7.4;ConnectRetryCount=1
+[0m16:36:00.588604 [debug] [Thread-1 (]: fabric adapter: Connected to db: GoogleSheets
+[0m16:36:00.611075 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m16:36:00.614276 [debug] [Thread-1 (]: Using sqlserver connection "model.DigitalData.campaign"
+[0m16:36:00.615327 [debug] [Thread-1 (]: On model.DigitalData.campaign: /* {"app": "dbt", "dbt_version": "1.7.16", "profile_name": "DigitalData", "target_name": "dev", "node_id": "model.DigitalData.campaign"} */
+
+      
+      
+    
+    USE [GoogleSheets];
+    EXEC('DROP view IF EXISTS "dbo"."campaign__dbt_backup";');
+
+[0m16:36:00.618237 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m16:36:00.620950 [debug] [Thread-1 (]: Using sqlserver connection "model.DigitalData.campaign"
+[0m16:36:00.621972 [debug] [Thread-1 (]: On model.DigitalData.campaign: /* {"app": "dbt", "dbt_version": "1.7.16", "profile_name": "DigitalData", "target_name": "dev", "node_id": "model.DigitalData.campaign"} */
+select
+      table_catalog as [database],
+      table_name as [name],
+      table_schema as [schema],
+      case when table_type = 'BASE TABLE' then 'table'
+           when table_type = 'VIEW' then 'view'
+           else table_type
+      end as table_type
+
+    from INFORMATION_SCHEMA.TABLES 
+    where table_schema like 'dbo'
+    and table_name like 'campaign'
+  
+[0m16:36:00.634355 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m16:36:00.638355 [debug] [Thread-1 (]: Writing runtime sql for node "model.DigitalData.campaign"
+[0m16:36:00.640355 [debug] [Thread-1 (]: Using sqlserver connection "model.DigitalData.campaign"
+[0m16:36:00.641355 [debug] [Thread-1 (]: On model.DigitalData.campaign: /* {"app": "dbt", "dbt_version": "1.7.16", "profile_name": "DigitalData", "target_name": "dev", "node_id": "model.DigitalData.campaign"} */
+USE [GoogleSheets];
+    
+    
+
+    EXEC('create view "dbo"."campaign" as with campaigns as (
+    select
+        campaignname_platform,
+        campaignid,
+        client,
+        property,
+        platform,
+        cast(getdate() as date) as load_date
+    from "GoogleSheets"."dbo"."doner"
+    where conversiontype is null
+    group by
+        campaignname_platform,
+        campaignid,
+        client,
+        property,
+        platform
+)
+
+select * from campaigns;');
+
+
+
+[0m16:36:00.649602 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m16:36:00.652601 [debug] [Thread-1 (]: On model.DigitalData.campaign: COMMIT
+[0m16:36:00.658601 [debug] [Thread-1 (]: Using sqlserver connection "model.DigitalData.campaign"
+[0m16:36:00.659644 [debug] [Thread-1 (]: On model.DigitalData.campaign: /* {"app": "dbt", "dbt_version": "1.7.16", "profile_name": "DigitalData", "target_name": "dev", "node_id": "model.DigitalData.campaign"} */
+
+      USE [GoogleSheets];
+      select
+          sch.name as schema_name,
+          obj.name as view_name
+      from sys.sql_expression_dependencies refs
+      inner join sys.objects obj
+      on refs.referencing_id = obj.object_id
+      inner join sys.schemas sch
+      on obj.schema_id = sch.schema_id
+      where refs.referenced_database_name = 'GoogleSheets'
+      and refs.referenced_schema_name = 'dbo'
+      and refs.referenced_entity_name = 'campaign__dbt_backup'
+      and refs.referencing_class = 1
+      and obj.type = 'V'
+      
+[0m16:36:00.662869 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m16:36:00.667871 [debug] [Thread-1 (]: Using sqlserver connection "model.DigitalData.campaign"
+[0m16:36:00.668872 [debug] [Thread-1 (]: On model.DigitalData.campaign: /* {"app": "dbt", "dbt_version": "1.7.16", "profile_name": "DigitalData", "target_name": "dev", "node_id": "model.DigitalData.campaign"} */
+
+      
+      
+    
+    USE [GoogleSheets];
+    EXEC('DROP view IF EXISTS "dbo"."campaign__dbt_backup";');
+
+[0m16:36:00.671094 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m16:36:00.674094 [debug] [Thread-1 (]: Timing info for model.DigitalData.campaign (execute): 16:36:00.574226 => 16:36:00.673095
+[0m16:36:00.675143 [debug] [Thread-1 (]: On model.DigitalData.campaign: ROLLBACK
+[0m16:36:00.676346 [debug] [Thread-1 (]: On model.DigitalData.campaign: Close
+[0m16:36:00.678075 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '05f8709e-35d8-4b06-9bc8-e23288bb3bc5', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A299CC6490>]}
+[0m16:36:00.679333 [info ] [Thread-1 (]: 9 of 12 OK created sql view model dbo.campaign ................................. [[32mOK[0m in 0.12s]
+[0m16:36:00.681430 [debug] [Thread-1 (]: Finished running node model.DigitalData.campaign
+[0m16:36:00.682444 [debug] [Thread-1 (]: Began running node model.DigitalData.campaign_attributes
+[0m16:36:00.683444 [info ] [Thread-1 (]: 10 of 12 START sql view model dbo.campaign_attributes .......................... [RUN]
+[0m16:36:00.685613 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.DigitalData.campaign, now model.DigitalData.campaign_attributes)
+[0m16:36:00.686698 [debug] [Thread-1 (]: Began compiling node model.DigitalData.campaign_attributes
+[0m16:36:00.693123 [debug] [Thread-1 (]: Writing injected SQL for node "model.DigitalData.campaign_attributes"
+[0m16:36:00.696123 [debug] [Thread-1 (]: Timing info for model.DigitalData.campaign_attributes (compile): 16:36:00.687884 => 16:36:00.695122
+[0m16:36:00.697123 [debug] [Thread-1 (]: Began executing node model.DigitalData.campaign_attributes
+[0m16:36:00.711489 [debug] [Thread-1 (]: Using sqlserver connection "model.DigitalData.campaign_attributes"
+[0m16:36:00.713087 [debug] [Thread-1 (]: On model.DigitalData.campaign_attributes: /* {"app": "dbt", "dbt_version": "1.7.16", "profile_name": "DigitalData", "target_name": "dev", "node_id": "model.DigitalData.campaign_attributes"} */
+
+      USE [GoogleSheets];
+      select
+          sch.name as schema_name,
+          obj.name as view_name
+      from sys.sql_expression_dependencies refs
+      inner join sys.objects obj
+      on refs.referencing_id = obj.object_id
+      inner join sys.schemas sch
+      on obj.schema_id = sch.schema_id
+      where refs.referenced_database_name = 'GoogleSheets'
+      and refs.referenced_schema_name = 'dbo'
+      and refs.referenced_entity_name = 'campaign_attributes__dbt_backup'
+      and refs.referencing_class = 1
+      and obj.type = 'V'
+      
+[0m16:36:00.713921 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m16:36:00.715623 [debug] [Thread-1 (]: fabric adapter: Using connection string: DRIVER={ODBC Driver 17 for SQL Server};SERVER=10.10.110.92,8050;Database=GoogleSheets;trusted_connection=Yes;encrypt=Yes;TrustServerCertificate=Yes;APP=dbt-sqlserver/1.7.4;ConnectRetryCount=1
+[0m16:36:00.716708 [debug] [Thread-1 (]: fabric adapter: Connected to db: GoogleSheets
+[0m16:36:00.738659 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m16:36:00.741664 [debug] [Thread-1 (]: Using sqlserver connection "model.DigitalData.campaign_attributes"
+[0m16:36:00.742665 [debug] [Thread-1 (]: On model.DigitalData.campaign_attributes: /* {"app": "dbt", "dbt_version": "1.7.16", "profile_name": "DigitalData", "target_name": "dev", "node_id": "model.DigitalData.campaign_attributes"} */
+
+      
+      
+    
+    USE [GoogleSheets];
+    EXEC('DROP view IF EXISTS "dbo"."campaign_attributes__dbt_backup";');
+
+[0m16:36:00.745663 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m16:36:00.747664 [debug] [Thread-1 (]: Using sqlserver connection "model.DigitalData.campaign_attributes"
+[0m16:36:00.748662 [debug] [Thread-1 (]: On model.DigitalData.campaign_attributes: /* {"app": "dbt", "dbt_version": "1.7.16", "profile_name": "DigitalData", "target_name": "dev", "node_id": "model.DigitalData.campaign_attributes"} */
+select
+      table_catalog as [database],
+      table_name as [name],
+      table_schema as [schema],
+      case when table_type = 'BASE TABLE' then 'table'
+           when table_type = 'VIEW' then 'view'
+           else table_type
+      end as table_type
+
+    from INFORMATION_SCHEMA.TABLES 
+    where table_schema like 'dbo'
+    and table_name like 'campaign_attributes'
+  
+[0m16:36:00.760271 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m16:36:00.764007 [debug] [Thread-1 (]: Writing runtime sql for node "model.DigitalData.campaign_attributes"
+[0m16:36:00.767007 [debug] [Thread-1 (]: Using sqlserver connection "model.DigitalData.campaign_attributes"
+[0m16:36:00.768008 [debug] [Thread-1 (]: On model.DigitalData.campaign_attributes: /* {"app": "dbt", "dbt_version": "1.7.16", "profile_name": "DigitalData", "target_name": "dev", "node_id": "model.DigitalData.campaign_attributes"} */
+USE [GoogleSheets];
+    
+    
+
+    EXEC('create view "dbo"."campaign_attributes" as with campaign_attributes as (
+    select
+        campaignid,
+        client,
+        property,
+        platform,
+        cast(getdate() as date) as load_date
+    from "GoogleSheets"."dbo"."doner"
+    where conversiontype is null
+    group by
+        campaignid,
+        client,
+        property,
+        platform
+)
+
+select * from campaign_attributes;');
+
+
+
+[0m16:36:00.776153 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m16:36:00.779152 [debug] [Thread-1 (]: On model.DigitalData.campaign_attributes: COMMIT
+[0m16:36:00.785170 [debug] [Thread-1 (]: Using sqlserver connection "model.DigitalData.campaign_attributes"
+[0m16:36:00.787154 [debug] [Thread-1 (]: On model.DigitalData.campaign_attributes: /* {"app": "dbt", "dbt_version": "1.7.16", "profile_name": "DigitalData", "target_name": "dev", "node_id": "model.DigitalData.campaign_attributes"} */
+
+      USE [GoogleSheets];
+      select
+          sch.name as schema_name,
+          obj.name as view_name
+      from sys.sql_expression_dependencies refs
+      inner join sys.objects obj
+      on refs.referencing_id = obj.object_id
+      inner join sys.schemas sch
+      on obj.schema_id = sch.schema_id
+      where refs.referenced_database_name = 'GoogleSheets'
+      and refs.referenced_schema_name = 'dbo'
+      and refs.referenced_entity_name = 'campaign_attributes__dbt_backup'
+      and refs.referencing_class = 1
+      and obj.type = 'V'
+      
+[0m16:36:00.790151 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m16:36:00.792151 [debug] [Thread-1 (]: Using sqlserver connection "model.DigitalData.campaign_attributes"
+[0m16:36:00.793156 [debug] [Thread-1 (]: On model.DigitalData.campaign_attributes: /* {"app": "dbt", "dbt_version": "1.7.16", "profile_name": "DigitalData", "target_name": "dev", "node_id": "model.DigitalData.campaign_attributes"} */
+
+      
+      
+    
+    USE [GoogleSheets];
+    EXEC('DROP view IF EXISTS "dbo"."campaign_attributes__dbt_backup";');
+
+[0m16:36:00.796154 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m16:36:00.798154 [debug] [Thread-1 (]: Timing info for model.DigitalData.campaign_attributes (execute): 16:36:00.697123 => 16:36:00.798154
+[0m16:36:00.799230 [debug] [Thread-1 (]: On model.DigitalData.campaign_attributes: ROLLBACK
+[0m16:36:00.800273 [debug] [Thread-1 (]: On model.DigitalData.campaign_attributes: Close
+[0m16:36:00.803275 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '05f8709e-35d8-4b06-9bc8-e23288bb3bc5', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A29A01A210>]}
+[0m16:36:00.804271 [info ] [Thread-1 (]: 10 of 12 OK created sql view model dbo.campaign_attributes ..................... [[32mOK[0m in 0.12s]
+[0m16:36:00.806274 [debug] [Thread-1 (]: Finished running node model.DigitalData.campaign_attributes
+[0m16:36:00.807273 [debug] [Thread-1 (]: Began running node model.DigitalData.metrics_paid
+[0m16:36:00.808516 [info ] [Thread-1 (]: 11 of 12 START sql view model dbo.metrics_paid ................................. [RUN]
+[0m16:36:00.810275 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.DigitalData.campaign_attributes, now model.DigitalData.metrics_paid)
+[0m16:36:00.811272 [debug] [Thread-1 (]: Began compiling node model.DigitalData.metrics_paid
+[0m16:36:00.822808 [debug] [Thread-1 (]: Writing injected SQL for node "model.DigitalData.metrics_paid"
+[0m16:36:00.824807 [debug] [Thread-1 (]: Timing info for model.DigitalData.metrics_paid (compile): 16:36:00.812273 => 16:36:00.824807
+[0m16:36:00.825806 [debug] [Thread-1 (]: Began executing node model.DigitalData.metrics_paid
+[0m16:36:00.840000 [debug] [Thread-1 (]: Using sqlserver connection "model.DigitalData.metrics_paid"
+[0m16:36:00.840971 [debug] [Thread-1 (]: On model.DigitalData.metrics_paid: /* {"app": "dbt", "dbt_version": "1.7.16", "profile_name": "DigitalData", "target_name": "dev", "node_id": "model.DigitalData.metrics_paid"} */
+
+      USE [GoogleSheets];
+      select
+          sch.name as schema_name,
+          obj.name as view_name
+      from sys.sql_expression_dependencies refs
+      inner join sys.objects obj
+      on refs.referencing_id = obj.object_id
+      inner join sys.schemas sch
+      on obj.schema_id = sch.schema_id
+      where refs.referenced_database_name = 'GoogleSheets'
+      and refs.referenced_schema_name = 'dbo'
+      and refs.referenced_entity_name = 'metrics_paid__dbt_backup'
+      and refs.referencing_class = 1
+      and obj.type = 'V'
+      
+[0m16:36:00.842027 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m16:36:00.842965 [debug] [Thread-1 (]: fabric adapter: Using connection string: DRIVER={ODBC Driver 17 for SQL Server};SERVER=10.10.110.92,8050;Database=GoogleSheets;trusted_connection=Yes;encrypt=Yes;TrustServerCertificate=Yes;APP=dbt-sqlserver/1.7.4;ConnectRetryCount=1
+[0m16:36:00.844965 [debug] [Thread-1 (]: fabric adapter: Connected to db: GoogleSheets
+[0m16:36:00.866667 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m16:36:00.869547 [debug] [Thread-1 (]: Using sqlserver connection "model.DigitalData.metrics_paid"
+[0m16:36:00.870549 [debug] [Thread-1 (]: On model.DigitalData.metrics_paid: /* {"app": "dbt", "dbt_version": "1.7.16", "profile_name": "DigitalData", "target_name": "dev", "node_id": "model.DigitalData.metrics_paid"} */
+
+      
+      
+    
+    USE [GoogleSheets];
+    EXEC('DROP view IF EXISTS "dbo"."metrics_paid__dbt_backup";');
+
+[0m16:36:00.873554 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m16:36:00.877511 [debug] [Thread-1 (]: Using sqlserver connection "model.DigitalData.metrics_paid"
+[0m16:36:00.878552 [debug] [Thread-1 (]: On model.DigitalData.metrics_paid: /* {"app": "dbt", "dbt_version": "1.7.16", "profile_name": "DigitalData", "target_name": "dev", "node_id": "model.DigitalData.metrics_paid"} */
+select
+      table_catalog as [database],
+      table_name as [name],
+      table_schema as [schema],
+      case when table_type = 'BASE TABLE' then 'table'
+           when table_type = 'VIEW' then 'view'
+           else table_type
+      end as table_type
+
+    from INFORMATION_SCHEMA.TABLES 
+    where table_schema like 'dbo'
+    and table_name like 'metrics_paid'
+  
+[0m16:36:00.891783 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m16:36:00.896085 [debug] [Thread-1 (]: Writing runtime sql for node "model.DigitalData.metrics_paid"
+[0m16:36:00.898084 [debug] [Thread-1 (]: Using sqlserver connection "model.DigitalData.metrics_paid"
+[0m16:36:00.899086 [debug] [Thread-1 (]: On model.DigitalData.metrics_paid: /* {"app": "dbt", "dbt_version": "1.7.16", "profile_name": "DigitalData", "target_name": "dev", "node_id": "model.DigitalData.metrics_paid"} */
+USE [GoogleSheets];
+    
+    
+
+    EXEC('create view "dbo"."metrics_paid" as with metrics_paid as (select
+        platform,
+        adgroupid,
+        adid,
+        [Date],
+        client,
+        property,
+        cast(getdate() as date) as load_date,
+        
+            sum(Clicks) as Clicks,
+        
+            sum(Impressions) as Impressions,
+        
+            sum(video100percent) as video100percent,
+        
+            sum(video50percent) as video50percent,
+        
+            sum(video75percent) as video75percent,
+        
+            sum(video25percent) as video25percent,
+        
+            sum(cost) as cost
+        
+
+    from "GoogleSheets"."dbo"."doner"
+    where conversiontype is not null
+    group by
+    platform,
+    adgroupid,
+    adid,
+    [Date],
+    client,
+    property
+
+)
+select * from metrics_paid;');
+
+
+
+[0m16:36:00.907092 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m16:36:00.908165 [debug] [Thread-1 (]: On model.DigitalData.metrics_paid: COMMIT
+[0m16:36:00.916463 [debug] [Thread-1 (]: Using sqlserver connection "model.DigitalData.metrics_paid"
+[0m16:36:00.917462 [debug] [Thread-1 (]: On model.DigitalData.metrics_paid: /* {"app": "dbt", "dbt_version": "1.7.16", "profile_name": "DigitalData", "target_name": "dev", "node_id": "model.DigitalData.metrics_paid"} */
+
+      USE [GoogleSheets];
+      select
+          sch.name as schema_name,
+          obj.name as view_name
+      from sys.sql_expression_dependencies refs
+      inner join sys.objects obj
+      on refs.referencing_id = obj.object_id
+      inner join sys.schemas sch
+      on obj.schema_id = sch.schema_id
+      where refs.referenced_database_name = 'GoogleSheets'
+      and refs.referenced_schema_name = 'dbo'
+      and refs.referenced_entity_name = 'metrics_paid__dbt_backup'
+      and refs.referencing_class = 1
+      and obj.type = 'V'
+      
+[0m16:36:00.921538 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m16:36:00.924674 [debug] [Thread-1 (]: Using sqlserver connection "model.DigitalData.metrics_paid"
+[0m16:36:00.925678 [debug] [Thread-1 (]: On model.DigitalData.metrics_paid: /* {"app": "dbt", "dbt_version": "1.7.16", "profile_name": "DigitalData", "target_name": "dev", "node_id": "model.DigitalData.metrics_paid"} */
+
+      
+      
+    
+    USE [GoogleSheets];
+    EXEC('DROP view IF EXISTS "dbo"."metrics_paid__dbt_backup";');
+
+[0m16:36:00.930842 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m16:36:00.934046 [debug] [Thread-1 (]: Timing info for model.DigitalData.metrics_paid (execute): 16:36:00.826807 => 16:36:00.934046
+[0m16:36:00.935046 [debug] [Thread-1 (]: On model.DigitalData.metrics_paid: ROLLBACK
+[0m16:36:00.935046 [debug] [Thread-1 (]: On model.DigitalData.metrics_paid: Close
+[0m16:36:00.935046 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '05f8709e-35d8-4b06-9bc8-e23288bb3bc5', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A299D10AD0>]}
+[0m16:36:00.939010 [info ] [Thread-1 (]: 11 of 12 OK created sql view model dbo.metrics_paid ............................ [[32mOK[0m in 0.13s]
+[0m16:36:00.941011 [debug] [Thread-1 (]: Finished running node model.DigitalData.metrics_paid
+[0m16:36:00.942055 [debug] [Thread-1 (]: Began running node test.DigitalData.dbt_utils_unique_combination_of_columns_ad_adid__adgroupid.e6899b5504
+[0m16:36:00.943016 [info ] [Thread-1 (]: 12 of 12 START test dbt_utils_unique_combination_of_columns_ad_adid__adgroupid . [RUN]
+[0m16:36:00.945059 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.DigitalData.metrics_paid, now test.DigitalData.dbt_utils_unique_combination_of_columns_ad_adid__adgroupid.e6899b5504)
+[0m16:36:00.946052 [debug] [Thread-1 (]: Began compiling node test.DigitalData.dbt_utils_unique_combination_of_columns_ad_adid__adgroupid.e6899b5504
+[0m16:36:00.963255 [debug] [Thread-1 (]: Writing injected SQL for node "test.DigitalData.dbt_utils_unique_combination_of_columns_ad_adid__adgroupid.e6899b5504"
+[0m16:36:00.966219 [debug] [Thread-1 (]: Timing info for test.DigitalData.dbt_utils_unique_combination_of_columns_ad_adid__adgroupid.e6899b5504 (compile): 16:36:00.947052 => 16:36:00.966219
+[0m16:36:00.967217 [debug] [Thread-1 (]: Began executing node test.DigitalData.dbt_utils_unique_combination_of_columns_ad_adid__adgroupid.e6899b5504
+[0m16:36:00.971220 [debug] [Thread-1 (]: Writing runtime sql for node "test.DigitalData.dbt_utils_unique_combination_of_columns_ad_adid__adgroupid.e6899b5504"
+[0m16:36:00.975216 [debug] [Thread-1 (]: Using sqlserver connection "test.DigitalData.dbt_utils_unique_combination_of_columns_ad_adid__adgroupid.e6899b5504"
+[0m16:36:00.975784 [debug] [Thread-1 (]: On test.DigitalData.dbt_utils_unique_combination_of_columns_ad_adid__adgroupid.e6899b5504: /* {"app": "dbt", "dbt_version": "1.7.16", "profile_name": "DigitalData", "target_name": "dev", "node_id": "test.DigitalData.dbt_utils_unique_combination_of_columns_ad_adid__adgroupid.e6899b5504"} */
+
+    
+
+    
+
+    EXEC('create view 
+      dbo.testview_8235
+     as 
+
+
+
+
+
+with validation_errors as (
+
+    select
+        adid, adgroupid
+    from "GoogleSheets"."dbo"."ad"
+    group by adid, adgroupid
+    having count(*) > 1
+
+)
+
+select *
+from validation_errors
+
+
+;')
+    select
+      
+      count(*) as failures,
+      case when count(*) != 0
+        then 'true' else 'false' end as should_warn,
+      case when count(*) != 0
+        then 'true' else 'false' end as should_error
+    from (
+      select * from 
+      dbo.testview_8235
+    
+    ) dbt_internal_test;
+
+    EXEC('drop view 
+      dbo.testview_8235
+    ;')
+
+  
+[0m16:36:00.977140 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m16:36:00.978142 [debug] [Thread-1 (]: fabric adapter: Using connection string: DRIVER={ODBC Driver 17 for SQL Server};SERVER=10.10.110.92,8050;Database=GoogleSheets;trusted_connection=Yes;encrypt=Yes;TrustServerCertificate=Yes;APP=dbt-sqlserver/1.7.4;ConnectRetryCount=1
+[0m16:36:00.979143 [debug] [Thread-1 (]: fabric adapter: Connected to db: GoogleSheets
+[0m16:36:02.159489 [debug] [Thread-1 (]: SQL status: OK in 1.0 seconds
+[0m16:36:02.159489 [debug] [Thread-1 (]: Timing info for test.DigitalData.dbt_utils_unique_combination_of_columns_ad_adid__adgroupid.e6899b5504 (execute): 16:36:00.968217 => 16:36:02.159489
+[0m16:36:02.159489 [debug] [Thread-1 (]: On test.DigitalData.dbt_utils_unique_combination_of_columns_ad_adid__adgroupid.e6899b5504: ROLLBACK
+[0m16:36:02.175116 [debug] [Thread-1 (]: On test.DigitalData.dbt_utils_unique_combination_of_columns_ad_adid__adgroupid.e6899b5504: Close
+[0m16:36:02.175116 [info ] [Thread-1 (]: 12 of 12 PASS dbt_utils_unique_combination_of_columns_ad_adid__adgroupid ....... [[32mPASS[0m in 1.23s]
+[0m16:36:02.175116 [debug] [Thread-1 (]: Finished running node test.DigitalData.dbt_utils_unique_combination_of_columns_ad_adid__adgroupid.e6899b5504
+[0m16:36:02.175116 [debug] [MainThread]: On master: COMMIT
+[0m16:36:02.175116 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m16:36:02.175116 [debug] [MainThread]: Connection 'list_GoogleSheets' was properly closed.
+[0m16:36:02.175116 [debug] [MainThread]: Connection 'list_GoogleSheets_dbo' was properly closed.
+[0m16:36:02.175116 [debug] [MainThread]: Connection 'test.DigitalData.dbt_utils_unique_combination_of_columns_ad_adid__adgroupid.e6899b5504' was properly closed.
+[0m16:36:02.175116 [info ] [MainThread]: 
+[0m16:36:02.175116 [info ] [MainThread]: Finished running 9 view models, 3 tests in 0 hours 0 minutes and 5.03 seconds (5.03s).
+[0m16:36:02.194027 [debug] [MainThread]: Command end result
+[0m16:36:02.217962 [info ] [MainThread]: 
+[0m16:36:02.219999 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m16:36:02.220714 [info ] [MainThread]: 
+[0m16:36:02.221788 [info ] [MainThread]: Done. PASS=12 WARN=0 ERROR=0 SKIP=0 TOTAL=12
+[0m16:36:02.225797 [debug] [MainThread]: Command `dbt build` succeeded at 16:36:02.224763 after 6.24 seconds
+[0m16:36:02.226734 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A298E4EFD0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A299DE0150>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A293A1E390>]}
+[0m16:36:02.227776 [debug] [MainThread]: Flushing usage events
