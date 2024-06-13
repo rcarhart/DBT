@@ -1,0 +1,6 @@
+locations:
+- build:
+    directory: ./DigitalData
+  code_source:
+    module_name: DigitalData.definitions
+  location_name: DigitalData
