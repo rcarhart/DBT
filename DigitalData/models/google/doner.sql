@@ -3,14 +3,14 @@ with maintable as (
         [Date],
         -- case statement to create PMAX off of ad group id
         case
-            when len(trim([Ad Group ID])) > 0 and [Campaign Type] = 'PERFORMANCE_MAX'
+            when len(trim([Ad Group ID])) = 0 and [Campaign Type] = 'PERFORMANCE_MAX'
                 then concat([Campaign ID],'_PMAX')
             else [Ad Group ID]
         end as adgroupid,
         --case statement to create PMAX off of ad group name
         case
             when len(trim([Ad Group Name]))=0 and [Campaign Type]='PERFORMANCE_MAX'
-                then concat('PMAX ',[Campaign])
+                then concat([Campaign],'PMAX')
             else [Ad Group Name]
         end as adgroupname_platform,
         -- case statement to create PMAX off of ad id
@@ -96,3 +96,4 @@ maintable_two as (
 )
 
 select * from maintable_two
+
