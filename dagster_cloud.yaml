@@ -1,6 +1,0 @@
-locations:
-- build:
-    directory: ./DBT
-  code_source:
-    module_name: DBT.definitions
-  location_name: DBT
