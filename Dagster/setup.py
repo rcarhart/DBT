@@ -13,8 +13,8 @@ setup(
         "dagster",
         "dagster-cloud",
         "dagster-dbt",
-        "dbt-sqlserver <1.7.4>",
-        "dbt-core <1.7.16>"
+        "dbt-sqlserver <1.7.4",
+        "dbt-core <1.7.16"
     ],
     extras_require={
         "dev": [
