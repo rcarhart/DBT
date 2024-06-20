@@ -1,5 +1,22 @@
+# Compiled and target directories
 target/
+compiled/
+
+# Logs and database artifacts
 logs/
-.pyc
-__pycache__/
+dbt.log
+
+# Python virtual environment
 venv/
+*.pyc
+__pycache__/
+
+# OS and IDE specific files
+.DS_Store
+.idea/
+.vscode/
+*.swp
+
+
+
+
