@@ -1,0 +1,14 @@
+version: 2
+
+sources:
+  - name: GoogleSheets
+    description: "Raw data from GoogleSheets."
+    database: GoogleSheets
+    schema: dbo
+    tables:
+      - name: DigitalData_AHA_Bing
+        description: "raw Digital Data for AHA Bing."
+      - name: DigitalData_Worldstrides_Bing
+        description: "raw Digital Data for Worldstrides Google."
+      - name: DigitalData_Motive_Bing
+        description: "Raw data from Motive for Bing."
