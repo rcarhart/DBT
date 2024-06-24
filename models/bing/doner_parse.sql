@@ -13,6 +13,6 @@ with bing_doner_parse as (
     [Impressions] as Impressions,
     [Spend (USD)] as cost,
     [Conversions] as conversions
-    from {{ ref('doner_union') }}
+    from {{ ref('union_sources_bing') }}
 )
 select * from bing_doner_parse
