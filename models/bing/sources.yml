@@ -8,7 +8,7 @@ sources:
     tables:
       - name: DigitalData_AHA_Bing
         description: "raw Digital Data for AHA Bing."
-      - name: DigitalData_Worldstrides_Bing
+      - name: DigitalData_WorldStrides_Bing
         description: "raw Digital Data for Worldstrides Google."
       - name: DigitalData_Motive_Bing
         description: "Raw data from Motive for Bing."
