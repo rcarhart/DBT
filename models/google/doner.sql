@@ -54,7 +54,7 @@ with maintable as (
         PARSENAME(REPLACE([Data Source Name], '|', '.'), 3) AS property, --parse data source to create property
         Conversions,
         [Ad Final Urls] as ad_final_urls
-    from {{ ref('doner_source_union') }}
+    from {{ ref('doner_union') }}
 ),
 
 
