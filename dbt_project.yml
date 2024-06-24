@@ -28,9 +28,37 @@ clean-targets:         # directories to be removed by `dbt clean`
 # directory as views. These settings can be overridden in the individual model
 # files using the `{{ config(...) }}` macro.
 models:
-  google:
-    +materialized: table
-    +schema: google
-  mapping:
-    +materialized: table
-    +schema: mapping
+  DigitalData:
+    google:
+      +materialized: table
+      +schema: google
+    bing:
+      +materialized: table
+      +schema: bing
+    choozle:
+      +materialized: table
+      +schema: choozle
+    klaviyo:
+      +materialized: table
+      +schema: klaviyo
+    linkedin:
+      +materialized: table
+      +schema: linkedin
+    media_alpha:
+      +materialized: table
+      +schema: media_alpha
+    meta:
+      +materialized: table
+      +schema: meta
+    pinterest:
+      +materialized: table
+      +schema: pinterest
+    the_trade_desk:
+      +materialized: table
+      +schema: the_trade_desk
+    TikTok:
+      +materialized: table
+      +schema: TikTok
+    mapping:
+      +materialized: table
+      +schema: mapping
