@@ -7,7 +7,7 @@ with grouping_cte as (
     property,
     adname_platform,
     platform
-    from {{ ref('doner_sources_bing') }}
+    from {{ ref('doner_bing_sources') }}
 ),
 
 bing_ads as (

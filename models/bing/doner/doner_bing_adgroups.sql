@@ -7,7 +7,7 @@ with ad_groups as (
     platform,
     campaignid,
     cast(getdate() as date) as load_date
-    from {{ ref('doner_sources_bing') }}
+    from {{ ref('doner_bing_sources') }}
 )
 
 Select * from ad_groups

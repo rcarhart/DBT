@@ -8,5 +8,5 @@ Select
     platform,
     'Bing' as conversiontype,
     cast(getdate() as date) as load_date
-from {{ ref('doner_sources_bing')}}
+from {{ ref('doner_bing_sources')}}
 where conversions > 0

@@ -10,6 +10,6 @@ with metrics_paid as (
     client,
     property,
     cast(getdate() as date) as load_date
-    from {{ ref('doner_sources_bing') }}
+    from {{ ref('doner_bing_sources') }}
 )
 Select * from metrics_paid

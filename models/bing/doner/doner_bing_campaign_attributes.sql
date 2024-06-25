@@ -4,4 +4,4 @@ client,
 property,
 platform,
 load_date
-from {{ ref('doner_campaigns')}}
+from {{ ref('doner_bing_campaigns')}}

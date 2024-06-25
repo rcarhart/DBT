@@ -1,32 +1,5 @@
-with ad_staging as (
-    select
-        adgroupid,
-        adid,
-        client,
-        property,
-        adname_platform,
-        platform,
-        cast(getdate() as date) as load_date,
-        row_number() over (partition by adgroupid, adid order by adgroupid, adid) as row_num
-    from {{ ref('doner') }}
-    where conversiontype is null
-    group by
-    adgroupid,
-    adid,
-    client,
-    property,
-    adname_platform,
-    platform
+with ad_cte as (
+    Select *
+    from {{ref('doner_bing_ads')}}
 )
-
-select
-adgroupid,
-adid,
-client,
-property,
-adname_platform,
-platform,
-load_date,
-row_num
-from ad_staging
-where row_num = 1
+Select * from ad_cte

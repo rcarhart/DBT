@@ -5,4 +5,4 @@ Select
     property,
     platform,
     load_date
-from {{ ref('doner_ads')}}
+from {{ ref('doner_bing_ads')}}

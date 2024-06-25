@@ -1,4 +1,19 @@
-with maintable as (
+with source_union_cte as(
+{{ dbt_utils.union_relations(
+
+    relations=[source('GoogleSheets', 'DigitalData_AHA_Google'),
+    source('GoogleSheets','DigitalData_DetroitZoo_Google'),
+    source('GoogleSheets','DigitalData_HungryHowies_Google LDSM'),
+    source('GoogleSheets','DigitalData_HungryHowies_Google Blitz'),
+    source('GoogleSheets','DigitalData_HungryHowies_Google Mature Markets'),
+    source('GoogleSheets','DigitalData_Motive_Google'),
+    source('GoogleSheets','DigitalData_Sprayway_Google'),
+    source('GoogleSheets','DigitalData_WorldStrides_Google'),
+    ])
+}}
+),
+
+doner_parse_cte as (
     select
         [Date],
         -- case statement to create PMAX off of ad group id
@@ -54,12 +69,10 @@ with maintable as (
         PARSENAME(REPLACE([Data Source Name], '|', '.'), 3) AS property, --parse data source to create property
         Conversions,
         [Ad Final Urls] as ad_final_urls
-    from {{ ref('union_sources_google') }}
+    from source_union_cte
 ),
 
-
-
-maintable_two as (
+doner_parse_cont_cte as (
     select
         [Date],
         adgroupid,
@@ -92,8 +105,7 @@ maintable_two as (
                 then concat('PMAX ', [campaignname_platform])
             else [adname_platform]
         end as adname_platform
-    from maintable
+    from doner_parse_cte
 )
 
-select * from maintable_two
-
+select * from doner_parse_cont_cte

@@ -5,4 +5,4 @@ client,
 property,
 platform,
 cast(getdate() as date) as load_date
-from {{ ref('doner_sources_bing') }}
+from {{ ref('doner_bing_sources') }}
