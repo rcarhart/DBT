@@ -33,6 +33,9 @@ models:
       +materialized: table
       +schema: google
     bing:
+      doner:
+        +materialized: view
+        +schema: bing
       +materialized: table
       +schema: bing
     choozle:
