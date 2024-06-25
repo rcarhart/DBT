@@ -8,7 +8,7 @@ with source_union as (
   ) }}
 ),
 
---rename fields and split data source field
+--rename fields,split data source field, create platform field
 renamed_fields_cte as (
   select
     [Campaign Name] as campaignname_platform,
@@ -23,27 +23,15 @@ renamed_fields_cte as (
     [Clicks] as clicks,
     [Impressions] as impressions,
     [Spend (USD)] as cost,
-    [Conversions] as conversions
+    [Conversions] as conversions,
+    'Bing' as platform
   from source_union
 ),
---add null data to adname_platform and create platform field
+
+--trim fields and create null data if no data exists in the field
 null_data_cte as(
-  Select
-  campaignname_platform,
-  Case
-    when len(trim(adname_platform)) = 0 then null else adname_platform end as adname_platform,
-  [date],
-  adid,
-  adgroupid,
-  adgroupname_platform,
-  campaignid,
-  client,
-  property,
-  clicks,
-  impressions,
-  cost,
-  conversions,
-  'Bing' as platform
+  select
+  {{ trim_and_null(['campaignname_platform','adname_platform', 'date', 'adid','adgroupid','adgroupname_platform','campaignid','client','property','clicks','impressions','cost','conversions','platform'])}}
   from renamed_fields_cte
 )
 Select * from null_data_cte
