@@ -33,11 +33,11 @@ models:
       +materialized: table
       +schema: google
     bing:
+      +materialized: table
+      +schema: bing
       doner:
         +materialized: view
         +schema: bing
-      +materialized: table
-      +schema: bing
     choozle:
       +materialized: table
       +schema: choozle

@@ -7,10 +7,10 @@ with grouping_cte as (
     property,
     adname_platform,
     platform
-    from {{ ref('union_sources_bing') }}
+    from {{ ref('doner_sources_bing') }}
 ),
 
-bing_mapping_ad as (
+bing_ads as (
     select
     adgroupid,
     adid,
@@ -23,4 +23,4 @@ bing_mapping_ad as (
     where row_num = 1
 )
 
-Select * from bing_mapping_ad
+Select * from bing_ads
