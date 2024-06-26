@@ -7,3 +7,4 @@ To use this project follow these steps:
 4. Install the dependencies: 'pip install .'
 
 Helpful links https://docs.getdbt.com/docs/introduction
+dbt utils pakcage: https://github.com/dbt-labs/dbt-utils

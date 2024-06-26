@@ -15,12 +15,13 @@ with metrics_paid as (
     from {{ ref('doner_google_sources') }}
     where conversiontype is null
     group by
-    platform,
-    adgroupid,
-    adid,
-    [Date],
-    client,
-    property
+        platform,
+        adgroupid,
+        adid,
+        [Date],
+        client,
+        property
+    having sum(Clicks) + sum(Impressions) + sum(cost) > 0
 
 )
-select count(*) from metrics_paid
+select * from metrics_paid

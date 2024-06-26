@@ -1,6 +1,12 @@
 with ad_attributes as (
-    select *
-    from {{ ref('doner_bing_ad_attributes')}}
+    {{dbt_utils.union_relations(
+        relations=[
+            ref('doner_bing_ad_attributes'),
+            ref('doner_google_ad_attributes')
+        ],
+        source_column_name=None
+    )
+    }}
 )
 
 select * from ad_attributes
