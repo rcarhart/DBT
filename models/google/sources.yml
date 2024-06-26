@@ -22,6 +22,8 @@ sources:
         description: "raw Digital Data for Sprayway Google."
       - name: DigitalData_WorldStrides_Google
         description: "raw Digital Data for WorldStrides Google."
+      - name: DigitalData_Prophet_Google
+        description: "raw Digital Data for Prophet Google."
 
 
 

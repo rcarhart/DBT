@@ -9,6 +9,7 @@ with source_union_cte as(
     source('GoogleSheets','DigitalData_Motive_Google'),
     source('GoogleSheets','DigitalData_Sprayway_Google'),
     source('GoogleSheets','DigitalData_WorldStrides_Google'),
+    source('GoogleSheets','DigitalData_Prophet_Google'),
     ])
 }}
 ),
@@ -82,7 +83,10 @@ doner_parse_cont_cte as (
         campaignname_platform,
         campaignid,
         campaigntype,
-        conversiontype,
+        case
+            when len(trim([conversiontype])) = 0 then NULL
+            else conversiontype
+        end as conversiontype,
         Clicks,
         cost,
         Impressions,
@@ -108,4 +112,6 @@ doner_parse_cont_cte as (
     from doner_parse_cte
 )
 
+
 select * from doner_parse_cont_cte
+

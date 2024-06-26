@@ -13,7 +13,7 @@ with metrics_paid as (
         {% endfor %}
 
     from {{ ref('doner_google_sources') }}
-    where conversiontype is not null
+    where conversiontype is null
     group by
     platform,
     adgroupid,
@@ -23,4 +23,4 @@ with metrics_paid as (
     property
 
 )
-select * from metrics_paid
+select count(*) from metrics_paid
