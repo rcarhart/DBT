@@ -24,6 +24,14 @@ ads_cte as (
         load_date
     from ads
     where row_num = 1
+    group by
+        adgroupid,
+        adid,
+        client,
+        property,
+        adname_platform,
+        platform,
+        load_date
 )
 Select *
 from ads_cte
