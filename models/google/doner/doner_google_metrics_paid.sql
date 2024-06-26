@@ -4,7 +4,7 @@ with metrics_paid as (
         platform,
         adgroupid,
         adid,
-        [Date],
+        [date],
         client,
         property,
         cast(getdate() as date) as load_date,
@@ -18,7 +18,7 @@ with metrics_paid as (
         platform,
         adgroupid,
         adid,
-        [Date],
+        [date],
         client,
         property
     having sum(Clicks) + sum(Impressions) + sum(cost) > 0

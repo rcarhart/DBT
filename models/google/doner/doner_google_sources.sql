@@ -16,7 +16,7 @@ with source_union_cte as(
 
 doner_parse_cte as (
     select
-        [Date],
+        [Date] as date,
         -- case statement to create PMAX off of ad group id
         case
             when len(trim([Ad Group ID])) = 0 and [Campaign Type] = 'PERFORMANCE_MAX'
@@ -75,7 +75,7 @@ doner_parse_cte as (
 
 doner_parse_cont_cte as (
     select
-        [Date],
+        [date],
         adgroupid,
         adgroupname_platform,
         adid,
