@@ -54,9 +54,9 @@ doner_parse_cte as (
             when len([GoogleAds_Paid_ConversionName]) = 0
                 then NULL
         end as conversiontype,
-        cast([Clicks] as float) as Clicks,
+        cast([Clicks] as float) as clicks,
         cast([Cost (USD)] as float) as cost,
-        cast([Impressions] as float) as Impressions,
+        cast([Impressions] as float) as impressions,
         cast([Video Played To 100%] as float) as video100percent,
         cast([Video Played To 25%] as float) as video25percent,
         cast([Video Played To 50%] as float)as video50percent,
@@ -87,9 +87,9 @@ doner_parse_cont_cte as (
             when len(trim([conversiontype])) = 0 then NULL
             else conversiontype
         end as conversiontype,
-        Clicks,
+        clicks,
         cost,
-        Impressions,
+        impressions,
         video100percent,
         video25percent,
         video50percent,

@@ -1,5 +1,5 @@
 with metrics_paid as (
-    {%- set metrics = ["Clicks", "Impressions", "video100percent", "video50percent", "video75percent", "video25percent", "cost"] -%}
+    {%- set metrics = ["clicks", "impressions", "video100percent", "video50percent", "video75percent", "video25percent", "cost"] -%}
     select
         platform,
         adgroupid,
@@ -21,7 +21,7 @@ with metrics_paid as (
         [date],
         client,
         property
-    having sum(Clicks) + sum(Impressions) + sum(cost) > 0
+    having sum(clicks) + sum(impressions) + sum(cost) > 0
 
 )
 select * from metrics_paid
