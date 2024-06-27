@@ -2,7 +2,7 @@ Select
     date,
     adid,
     adgroupid,
-    cast(conversions as int) as conversions,
+    cast(conversions as float) as conversions,
     client,
     property,
     platform,

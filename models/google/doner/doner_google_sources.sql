@@ -68,7 +68,7 @@ doner_parse_cte as (
         [Views (75%)],
         PARSENAME(REPLACE([Data Source name], '|', '.'), 4) AS client, --parse data source to create client
         PARSENAME(REPLACE([Data Source Name], '|', '.'), 3) AS property, --parse data source to create property
-        Conversions,
+        cast(Conversions as float) as conversions,
         [Ad Final Urls] as ad_final_urls
     from source_union_cte
 ),
@@ -101,7 +101,7 @@ doner_parse_cont_cte as (
         [Views (75%)],
         client,
         property,
-        Conversions,
+        conversions,
         ad_final_urls,
         'GoogleAds' as platform,
         case
