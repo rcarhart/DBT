@@ -66,5 +66,5 @@ models:
       +materialized: table
       +schema: TikTok
     mapping:
-      +materialized: table
+      +materialized: incremental
       +schema: mapping

@@ -1,3 +1,10 @@
+{{
+  config(
+    materialized = 'incremental',
+    unique_key = ['adgroupid','campaignid','platform']
+    )
+}}
+
 with ad_group as (
     {{dbt_utils.union_relations(
         relations=[
@@ -10,3 +17,7 @@ with ad_group as (
 )
 
 select * from ad_group
+
+{% if is_incremental()%}
+    where load_date >= (select max(load_date) from {{ this }})
+{% endif %}

@@ -1,3 +1,10 @@
+{{
+    config(
+        materialized='incremental',
+        unique_key=['adgroupid','adid','conversiontype','platform','date']
+    )
+}}
+
 with metric_conversions as (
     {{dbt_utils.union_relations(
         relations=[
@@ -10,3 +17,6 @@ with metric_conversions as (
 )
 
 Select * from metric_conversions
+{% if is_incremental() %}
+    where load_date >= (select max(load_date) from {{ this }})
+{% endif %}
